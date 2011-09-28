@@ -1,0 +1,9 @@
+package br.usp.esi.entities;
+
+import java.util.Date;
+
+public class DisciplinaHorarioAula {
+	private Date data;
+	private Disciplina disciplina;
+	private HorarioAula horarioAula;
+}

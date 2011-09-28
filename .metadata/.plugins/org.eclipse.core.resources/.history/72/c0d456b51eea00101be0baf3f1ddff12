@@ -1,0 +1,7 @@
+package br.usp.esi.entities;
+
+public class Sala extends Espaco {
+	private int numeroSala;
+	private String tipoSala;
+	private int andar;
+}

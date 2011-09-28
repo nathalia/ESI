@@ -1,0 +1,6 @@
+package br.usp.esi.entities;
+
+public class Periodo {
+	private int id;
+	
+}

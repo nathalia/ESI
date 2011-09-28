@@ -1,0 +1,5 @@
+package br.usp.esi.entities;
+
+public class DisciplinaHorarioAula {
+
+}

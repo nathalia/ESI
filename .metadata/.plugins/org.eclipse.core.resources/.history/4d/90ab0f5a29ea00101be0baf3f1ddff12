@@ -1,0 +1,7 @@
+package br.usp.esi.entities;
+
+import java.util.List;
+
+public class Grade {
+	private List<HorarioAula> horarios;
+}

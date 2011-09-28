@@ -1,0 +1,9 @@
+package br.usp.esi.entities;
+
+public interface Pessoa {
+	String nome;
+	int numeroUSP;
+	//colocar curso
+	
+	
+}

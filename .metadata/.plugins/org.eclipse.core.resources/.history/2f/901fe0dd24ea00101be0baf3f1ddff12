@@ -1,0 +1,9 @@
+package br.usp.esi.entities;
+
+import java.util.List;
+
+public class Periodo {
+	private int id;
+	private String nome;
+	private List<E>
+}

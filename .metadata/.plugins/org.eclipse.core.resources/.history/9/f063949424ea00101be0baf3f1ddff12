@@ -1,0 +1,8 @@
+package br.usp.esi.entities;
+
+import java.util.Date;
+
+public class HorarioAula {
+	private int horaInicio;
+	private int horaFim;
+}

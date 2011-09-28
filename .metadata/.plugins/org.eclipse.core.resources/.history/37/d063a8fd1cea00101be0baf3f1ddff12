@@ -1,0 +1,8 @@
+package br.usp.esi;
+
+public class Espaco {
+	private int id;
+	private int codigo;
+	private String nome;
+	private int lotacaoMax;
+}

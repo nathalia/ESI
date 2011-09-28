@@ -1,0 +1,11 @@
+package br.usp.esi.entities;
+
+public class Disciplina {
+	private String nome;
+	private int codigo;
+	private int creditosAula;
+	private int creditosTrabalho;
+	private int cargaHoraria;
+	private int descricao;
+	
+}
