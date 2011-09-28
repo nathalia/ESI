@@ -18,4 +18,4 @@ target
 bin-debug
 html-template
 java/sdg-java/src/main/webapp/apps/
-.metadata
+*.metadata/
