@@ -1,7 +1,0 @@
-package br.usp.esi.entities;
-
-public class Disciplina {
-	private String nome;
-	private int codigo;
-	
-}

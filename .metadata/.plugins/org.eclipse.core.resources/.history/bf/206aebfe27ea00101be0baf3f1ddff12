@@ -1,6 +1,0 @@
-package br.usp.esi.entities;
-
-public class DisciplinaHorarioAula {
-	private Disciplina disciplina;
-	private HorarioAula horarioAula;
-}

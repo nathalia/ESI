@@ -1,6 +1,0 @@
-package br.usp.esi.entities;
-
-public class Laboratorio extends Espaco {
-	private int numeroLab;
-	
-}

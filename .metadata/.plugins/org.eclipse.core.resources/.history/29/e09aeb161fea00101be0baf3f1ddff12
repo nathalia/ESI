@@ -1,8 +1,0 @@
-package br.usp.esi.entities;
-
-public class Auditorio extends Espaco {
-	private int numeroAuditorio;
-	private boolean dataShow;
-	
-	
-}

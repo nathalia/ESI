@@ -1,7 +1,14 @@
 package br.usp.esi.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="usuario")
+@Entity
 public class Usuario {
-	private int id;
+	@Id
+	private Integer id;
 	private String nome;
 	private int numeroUSP;
 	private Curso curso;
@@ -9,10 +16,10 @@ public class Usuario {
 	private String senha;
 	private String tipoUsuario;
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getNome() {

@@ -1,8 +1,0 @@
-package br.usp.esi.entities;
-
-import java.util.Date;
-
-public class HorarioAula {
-	private Date data;
-	private 
-}

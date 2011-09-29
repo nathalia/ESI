@@ -1,8 +1,0 @@
-package br.usp.esi.entities;
-
-public class Usuario {
-	private String user;
-	private String senha;
-	
-	
-}
