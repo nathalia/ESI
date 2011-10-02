@@ -2,7 +2,19 @@ package br.usp.esi.entities;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="curso")
 public class Curso {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="curso_id", nullable=false)
 	private int id;
 	private String nome;
 	private List<Disciplina> disciplinas;
@@ -14,18 +26,21 @@ public class Curso {
 	public void setId(int id) {
 		this.id = id;
 	}
+	@Column(name="nome_curso", nullable=false, length=255)
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
+	@Column(name="descricao", nullable=false, length=1000)
 	public String getDescricao() {
 		return descricao;
 	}
