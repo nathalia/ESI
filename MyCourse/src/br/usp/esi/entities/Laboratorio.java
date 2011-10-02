@@ -19,7 +19,7 @@ public class Laboratorio extends Espaco {
 	private Integer id;
 	private int numeroLab;
 	private String tipoLab;
-	private Integer espacoId;
+	private Espaco espaco;
 	
 	public int getId() {
 		return id;
@@ -43,10 +43,10 @@ public class Laboratorio extends Espaco {
 	}
 	@Column(name="espaco_id", nullable=false)
 	@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
-	public Integer getEspacoId() {
-		return espacoId;
+	public Espaco getEspaco() {
+		return espaco;
 	}
-	public void setEspacoId(Integer espacoId) {
-		this.espacoId = espacoId;
+	public void setEspaco(Espaco espaco) {
+		this.espaco = espaco;
 	}
 }

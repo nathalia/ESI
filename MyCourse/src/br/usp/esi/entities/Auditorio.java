@@ -19,7 +19,7 @@ public class Auditorio extends Espaco {
 	private Integer id;
 	private int numeroAuditorio;
 	private boolean dataShow;
-	private Integer idEspaco;
+	private Espaco espaco;
 	
 	public int getId() {
 		return id;
@@ -44,10 +44,10 @@ public class Auditorio extends Espaco {
 	
 	@Column(name="espaco_id", nullable=false)
 	@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
-	public Integer getIdEspaco() {
-		return idEspaco;
+	public Espaco getEspaco() {
+		return espaco;
 	}
-	public void setIdEspaco(Integer idEspaco) {
-		this.idEspaco = idEspaco;
+	public void setEspaco(Espaco espaco) {
+		this.espaco = espaco;
 	}
 }
