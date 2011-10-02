@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Table(name="usuario")
 @Entity
 public class Usuario {

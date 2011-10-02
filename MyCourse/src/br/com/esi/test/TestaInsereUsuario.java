@@ -9,7 +9,7 @@ import br.usp.esi.entities.HorarioAula;
 public class TestaInsereUsuario {
 	public static void main(String[] args){
 		EntityManagerFactory factory = Persistence.
-			createEntityManagerFactory("mycourse");
+			createEntityManagerFactory("esi");
 		EntityManager entityManager = factory.createEntityManager();
 		
 		HorarioAula ha = new HorarioAula();
