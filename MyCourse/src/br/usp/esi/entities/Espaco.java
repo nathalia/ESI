@@ -1,6 +1,15 @@
 package br.usp.esi.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="espaco")
 public class Espaco {
+	@Id
+	@GeneratedValue
 	private int id;
 	private int codigo;
 	private String nome;
