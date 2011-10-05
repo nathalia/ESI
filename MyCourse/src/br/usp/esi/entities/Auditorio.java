@@ -7,6 +7,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -42,7 +43,7 @@ public class Auditorio extends Espaco {
 		this.dataShow = dataShow;
 	}
 	
-	@Column(name="espaco_id", nullable=false)
+	@JoinColumn(name="espaco_id", nullable=false)
 	@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
 	public Espaco getEspaco() {
 		return espaco;

@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +18,7 @@ public class HorarioAula {
 	private Integer id;
 	private int horaInicio;
 	private int horaFim;
+	private Grade grade;
 	
 	public Integer getId() {
 		return id;
@@ -36,5 +39,13 @@ public class HorarioAula {
 	}
 	public void setHoraFim(int horaFim) {
 		this.horaFim = horaFim;
+	}
+	@JoinColumn(name="grade_id", nullable=false)
+	@ManyToOne
+	public Grade getGrade() {
+		return grade;
+	}
+	public void setGrade(Grade grade) {
+		this.grade = grade;
 	}
 }
