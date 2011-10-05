@@ -1,6 +1,7 @@
 package br.usp.esi.entities;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,17 +12,15 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.ForeignKey;
-
 @Entity
 @Table(name="curso")
 public class Curso {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="curso_id", nullable=false)
+	@Column(name="curso_id")
 	private int id;
 	private String nome;
-	private List<Disciplina> disciplinas;
+	private Set<Disciplina> disciplinas = new HashSet<Disciplina>(0);
 	private String descricao;
 	
 	public int getId() {
@@ -37,12 +36,11 @@ public class Curso {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	@OneToMany(fetch= FetchType.LAZY, mappedBy= "curso")
-	@ForeignKey(name="FK_disciplina_curso")
-	public List<Disciplina> getDisciplinas() {
+	@OneToMany(fetch=FetchType.EAGER)
+	public Set<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
-	public void setDisciplinas(List<Disciplina> disciplinas) {
+	public void setDisciplinas(Set<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
 	@Column(name="descricao", nullable=false, length=1000)

@@ -7,13 +7,12 @@ import org.hibernate.classic.Session;
 import br.usp.esi.entities.Curso;
 
 public class CursoDAO {
-	AnnotationConfiguration ac = new AnnotationConfiguration();
-	ac.configure();
-
-	SessionFactory factory = ac.buildSessionFactory();
-	Session session = factory.openSession();
-	
-	public Curso save(Curso crurso){
+	public Curso save(Curso curso){
+		AnnotationConfiguration ac = new AnnotationConfiguration();
+		ac.configure();
 		
+		SessionFactory factory = ac.buildSessionFactory();
+		Session session = factory.openSession();
+		return curso;
 	}
 }

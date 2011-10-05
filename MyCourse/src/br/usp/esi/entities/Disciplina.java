@@ -1,15 +1,25 @@
 package br.usp.esi.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="disciplina")
-public class Disciplina {
+public class Disciplina implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="disciplina_id", nullable=false)
@@ -21,6 +31,7 @@ public class Disciplina {
 	private int cargaHoraria;
 	private int descricao;
 	private int periodoIdeal;
+	private Curso curso;
 	
 	public int getId() {
 		return id;
@@ -76,5 +87,13 @@ public class Disciplina {
 	}
 	public void setPeriodoIdeal(int periodoIdeal) {
 		this.periodoIdeal = periodoIdeal;
+	}
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumns({@JoinColumn(name="curso_id", nullable=false)})  
+	public Curso getCurso() {
+		return curso;
+	}
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
 }
