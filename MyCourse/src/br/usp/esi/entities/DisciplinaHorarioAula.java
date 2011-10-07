@@ -19,6 +19,8 @@ public class DisciplinaHorarioAula {
 	private Integer id;
 	private Date data;
 	private Disciplina disciplina;
+	@JoinColumn(name="horario_aula_id", nullable=false)
+	@OneToOne
 	private HorarioAula horarioAula;
 	
 	public Integer getId() {
@@ -42,8 +44,7 @@ public class DisciplinaHorarioAula {
 	public void setDisciplina(Disciplina disciplina) {
 		this.disciplina = disciplina;
 	}
-	@JoinColumn(name="horario_aula_id", nullable=false)
-	@OneToOne
+	
 	public HorarioAula getHorarioAula() {
 		return horarioAula;
 	}

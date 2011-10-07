@@ -31,6 +31,8 @@ public class Disciplina implements Serializable {
 	private int cargaHoraria;
 	private int descricao;
 	private int periodoIdeal;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumns({@JoinColumn(name="curso_id", nullable=false)})  
 	private Curso curso;
 	
 	public int getId() {
@@ -88,8 +90,6 @@ public class Disciplina implements Serializable {
 	public void setPeriodoIdeal(int periodoIdeal) {
 		this.periodoIdeal = periodoIdeal;
 	}
-	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumns({@JoinColumn(name="curso_id", nullable=false)})  
 	public Curso getCurso() {
 		return curso;
 	}

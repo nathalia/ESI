@@ -1,7 +1,7 @@
 package br.usp.esi.entities;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,7 +20,10 @@ public class Curso {
 	@Column(name="curso_id")
 	private int id;
 	private String nome;
-	private Set<Disciplina> disciplinas = new HashSet<Disciplina>(0);
+	@OneToMany(fetch=FetchType.LAZY)
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+	@OneToMany(fetch=FetchType.LAZY)
+	private List<Usuario> usuarios = new ArrayList<Usuario>();
 	private String descricao;
 	
 	public int getId() {
@@ -36,11 +39,16 @@ public class Curso {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	@OneToMany(fetch=FetchType.EAGER)
-	public Set<Disciplina> getDisciplinas() {
+	public List<Usuario> getUsuarios() {
+		return usuarios;
+	}
+	public void setUsuarios(List<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
-	public void setDisciplinas(Set<Disciplina> disciplinas) {
+	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
 	@Column(name="descricao", nullable=false, length=1000)

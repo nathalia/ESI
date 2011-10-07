@@ -18,6 +18,8 @@ public class HorarioAula {
 	private Integer id;
 	private int horaInicio;
 	private int horaFim;
+	@JoinColumn(name="grade_id", nullable=false)
+	@ManyToOne
 	private Grade grade;
 	
 	public Integer getId() {
@@ -40,8 +42,7 @@ public class HorarioAula {
 	public void setHoraFim(int horaFim) {
 		this.horaFim = horaFim;
 	}
-	@JoinColumn(name="grade_id", nullable=false)
-	@ManyToOne
+	
 	public Grade getGrade() {
 		return grade;
 	}

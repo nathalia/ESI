@@ -21,6 +21,8 @@ public class Grade {
 	@Column(name="grade_id", nullable=false)
 	private Integer id;
 	private String nomePeriodo;
+	@OneToMany(fetch=FetchType.LAZY, mappedBy="grade")
+	@ForeignKey(name="FK_horario_grade")
 	private List<HorarioAula> horarios;
 	
 	public Integer getId() {
@@ -36,8 +38,7 @@ public class Grade {
 	public void setNomePeriodo(String nomePeriodo) {
 		this.nomePeriodo = nomePeriodo;
 	}
-	@OneToMany(fetch=FetchType.LAZY, mappedBy="horario_aula")
-	@ForeignKey(name="FK_horario_grade")
+	
 	public List<HorarioAula> getHorarios() {
 		return horarios;
 	}

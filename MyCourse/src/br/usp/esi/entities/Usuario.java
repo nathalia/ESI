@@ -1,8 +1,12 @@
 package br.usp.esi.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -14,6 +18,8 @@ public class Usuario {
 	private Integer id;
 	private String nome;
 	private int numeroUSP;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumns({@JoinColumn(name="curso_id", nullable=false)})
 	private Curso curso;
 	private String user;
 	private String senha;
