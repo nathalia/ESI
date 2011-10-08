@@ -1,22 +1,25 @@
 package br.usp.esi.dao;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
-import org.hibernate.classic.Session;
+import java.util.List;
+
+import org.hibernate.Query;
 
 import br.usp.esi.entities.Usuario;
 
-public class UsuarioDAO {
-	public Usuario save(Usuario usuario){
-		AnnotationConfiguration ac = new AnnotationConfiguration();
-		ac.configure();
+public class UsuarioDAO extends EntityDAO{
+	public List<Usuario> getAll(){
+		session.beginTransaction();
+		List<Usuario> usuarios = null;
 		
-		SessionFactory factory = ac.buildSessionFactory();
-		Session session = factory.openSession();
+		String SQL = "FROM usuario ";
 		
-		session.persist(usuario);
-		session.getTransaction().commit();
-		
-		return usuario;
+		try {
+			Query q = session.createQuery(SQL);
+			usuarios = q.list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		session.beginTransaction().commit();
+		return usuarios;
 	}
 }
