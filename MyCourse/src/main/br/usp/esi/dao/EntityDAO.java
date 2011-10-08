@@ -1,7 +1,12 @@
 package main.br.usp.esi.dao;
 
+import java.io.Serializable;
+import java.util.List;
+
 import main.br.usp.esi.factory.HibernateUtil;
 
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 
@@ -12,27 +17,25 @@ public class EntityDAO {
 		session = HibernateUtil.getSessionFactory().openSession();
 	}
 
-	public boolean insert(Object obj) {
+	public Object insert(Object obj) {
+		Object rObj = null;
 		try {
 			session.beginTransaction();
-
 			try {
-				session.save(obj);
+				rObj = getEntity(obj.getClass(), session.save(obj));
 			} catch (Exception e) {
 				session.beginTransaction().rollback();
-				return false;
+				return null;
 			}
-
 			session.beginTransaction().commit();
+			return rObj;
 		} catch (Exception e) {
-			return false;
+			return null;
 		}
-		return true;
 	}
 
 	public boolean delete(Object obj) {
 		try {
-
 			session.beginTransaction();
 			try {
 				session.delete(obj);
@@ -62,4 +65,35 @@ public class EntityDAO {
 			return false;
 		}
 	}
+	
+	public Object getEntity(@SuppressWarnings("rawtypes") Class classe, Serializable serializable){
+		return session.get(classe, serializable);
+	}
+	
+	public List findAll(Class clazz) {
+        List objects = null;
+        try {
+        	session.beginTransaction();
+            Query query = session.createQuery("from " + clazz.getName());
+            objects = query.list();
+            session.beginTransaction().commit();
+        } catch (HibernateException e) {
+        	session.beginTransaction().rollback();
+        	return null;
+        } 
+        return objects;
+    }
+	
+	public Object find(Class clazz, int id) {
+        Object obj = null;
+        try {
+        	session.beginTransaction();
+            obj = session.load(clazz, id);
+            session.beginTransaction().commit();
+        } catch (HibernateException e) {
+        	session.beginTransaction().rollback();
+        	return null;
+        } 
+        return obj;
+    }
 }

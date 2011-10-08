@@ -22,10 +22,7 @@ public class EspacoServiceImpl implements EspacoService {
 
 	@Override
 	public Espaco saveEspaco(Espaco espaco) {
-		if (espacoDAO.insert(espaco))
-			return espaco;
-		else
-			return null;
+		return (Espaco)espacoDAO.insert(espaco);
 	}
 
 	@Override

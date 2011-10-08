@@ -22,10 +22,7 @@ public class CursoServiceImpl implements CursoService {
 
 	@Override
 	public Curso saveCurso(Curso curso) {
-		if (cursoDAO.insert(curso))
-			return curso;
-		else
-			return null;
+		return (Curso)cursoDAO.insert(curso);
 	}
 
 	@Override

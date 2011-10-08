@@ -21,12 +21,20 @@ public interface UsuarioService {
 	Usuario getUsuario(Integer id);
 
 	/**
-	 * Metodo para salvar/atualizar usuario
+	 * Metodo para salvar usuario
 	 * 
 	 * @param usuario
 	 * @return Usuario
 	 */
 	Usuario saveUsuario(Usuario usuario);
+	
+	/**
+	 * Metodo para atualizar usuario
+	 * 
+	 * @param usuario
+	 * @return Usuario
+	 */
+	Usuario updateUsuario(Usuario usuario);
 
 	/**
 	 * Metodo para excluir um usuario

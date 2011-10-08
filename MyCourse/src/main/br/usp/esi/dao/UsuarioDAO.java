@@ -22,4 +22,5 @@ public class UsuarioDAO extends EntityDAO{
 		session.beginTransaction().commit();
 		return usuarios;
 	}
+	
 }

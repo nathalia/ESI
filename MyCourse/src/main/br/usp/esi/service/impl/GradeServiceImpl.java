@@ -21,10 +21,7 @@ public class GradeServiceImpl implements GradeService {
 
 	@Override
 	public Grade saveGrade(Grade grade) {
-		if (gradeDAO.insert(grade))
-			return grade;
-		else
-			return null;
+		return (Grade)gradeDAO.insert(grade);
 	}
 
 	@Override

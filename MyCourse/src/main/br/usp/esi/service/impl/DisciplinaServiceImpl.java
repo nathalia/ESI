@@ -22,10 +22,7 @@ public class DisciplinaServiceImpl implements DisciplinaService {
 
 	@Override
 	public Disciplina saveDisciplina(Disciplina disciplina) {
-		if(disciplinaDAO.insert(disciplina))
-			return disciplina;
-		else
-			return null;
+		return (Disciplina)disciplinaDAO.insert(disciplina);
 	}
 
 	@Override

@@ -11,21 +11,17 @@ public class UsuarioServiceImpl implements UsuarioService {
 	
 	@Override
 	public List<Usuario> listAll() {
-		return usuarioDAO.getAll();
+		return usuarioDAO.findAll(Usuario.class);
 	}
 
 	@Override
 	public Usuario getUsuario(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Usuario)usuarioDAO.find(Usuario.class, id);
 	}
 
 	@Override
 	public Usuario saveUsuario(Usuario usuario) {
-		if (usuarioDAO.insert(usuario))
-			return usuario;
-		else
-			return null;
+		return (Usuario)usuarioDAO.insert(usuario);
 	}
 
 	@Override
@@ -36,4 +32,11 @@ public class UsuarioServiceImpl implements UsuarioService {
 			return null;
 	}
 
+	@Override
+	public Usuario updateUsuario(Usuario usuario) {
+		if (usuarioDAO.update(usuario))
+			return usuario;
+		else
+			return null;
+	}
 }

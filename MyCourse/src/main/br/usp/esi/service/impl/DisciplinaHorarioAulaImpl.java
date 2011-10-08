@@ -23,10 +23,7 @@ public class DisciplinaHorarioAulaImpl implements DisciplinaHorarioAulaService {
 	@Override
 	public DisciplinaHorarioAula saveDisciplinaHorarioAula(
 			DisciplinaHorarioAula disciplinaHorarioAula) {
-		if (disciplinaHorarioAulaDAO.insert(disciplinaHorarioAula))
-			return disciplinaHorarioAula;
-		else
-			return null;
+		return (DisciplinaHorarioAula) disciplinaHorarioAulaDAO.insert(disciplinaHorarioAula);
 	}
 
 	@Override
