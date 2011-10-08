@@ -13,18 +13,18 @@
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 
-		<mapping class="br.usp.esi.entities.Espaco"/>
-		<mapping class="br.usp.esi.entities.Auditorio"/>
-		<mapping class="br.usp.esi.entities.Sala"/>
-		<mapping class="br.usp.esi.entities.SalaBiblioteca"/>
-		<mapping class="br.usp.esi.entities.Laboratorio"/>
-		<mapping class="br.usp.esi.entities.Usuario"/>
-		<mapping class="br.usp.esi.entities.Disciplina"/>
-		<mapping class="br.usp.esi.entities.Curso"/>
-		<mapping class="br.usp.esi.entities.DisciplinaHorarioAula"/>
-		<mapping class="br.usp.esi.entities.HorarioAula"/>
-		<mapping class="br.usp.esi.entities.Grade"/>
+		<mapping class="main.br.usp.esi.entities.Espaco"/>
+		<mapping class="main.br.usp.esi.entities.Auditorio"/>
+		<mapping class="main.br.usp.esi.entities.Sala"/>
+		<mapping class="main.br.usp.esi.entities.SalaBiblioteca"/>
+		<mapping class="main.br.usp.esi.entities.Laboratorio"/>
+		<mapping class="main.br.usp.esi.entities.Usuario"/>
+		<mapping class="main.br.usp.esi.entities.Disciplina"/>
+		<mapping class="main.br.usp.esi.entities.Curso"/>
+		<mapping class="main.br.usp.esi.entities.DisciplinaHorarioAula"/>
+		<mapping class="main.br.usp.esi.entities.HorarioAula"/>
+		<mapping class="main.br.usp.esi.entities.Grade"/>
 	</session-factory>
 </hibernate-configuration>
