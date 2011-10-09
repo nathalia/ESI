@@ -4,6 +4,7 @@ import java.util.List;
 
 import main.br.usp.esi.dao.CursoDAO;
 import main.br.usp.esi.entities.Curso;
+import main.br.usp.esi.entities.Usuario;
 import main.br.usp.esi.service.CursoService;
 
 public class CursoServiceImpl implements CursoService {
@@ -28,6 +29,14 @@ public class CursoServiceImpl implements CursoService {
 	@Override
 	public Curso deleteCurso(Curso curso) {
 		if (cursoDAO.delete(curso))
+			return curso;
+		else
+			return null;
+	}
+
+	@Override
+	public Curso updateCurso(Curso curso) {
+		if (cursoDAO.update(curso))
 			return curso;
 		else
 			return null;

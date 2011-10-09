@@ -30,7 +30,6 @@ public class UsuarioTest extends TestCase{
 		Usuario usuarioRetornado = userService.saveUsuario(userIni);
 
 		assertEquals(usuarioRetornado.getNumeroUSP(), userIni.getNumeroUSP());
-		
 	}
 	
 	public void testSelectAllUsuario(){

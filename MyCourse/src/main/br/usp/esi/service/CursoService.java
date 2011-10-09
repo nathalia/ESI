@@ -3,6 +3,7 @@ package main.br.usp.esi.service;
 import java.util.List;
 
 import main.br.usp.esi.entities.Curso;
+import main.br.usp.esi.entities.Usuario;
 
 
 public interface CursoService {
@@ -28,6 +29,14 @@ public interface CursoService {
 	 * @return Curso
 	 */
 	Curso saveCurso(Curso curso);
+	
+	/**
+	 * Metodo para atualizar curso
+	 * 
+	 * @param curso
+	 * @return Curso
+	 */
+	Curso updateCurso(Curso curso);
 
 	/**
 	 * Metodo para excluir um curso
