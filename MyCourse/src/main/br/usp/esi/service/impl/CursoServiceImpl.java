@@ -12,13 +12,12 @@ public class CursoServiceImpl implements CursoService {
 	
 	@Override
 	public List<Curso> listAll() {
-		return cursoDAO.getAll();
+		return cursoDAO.findAll(Curso.class);
 	}
 
 	@Override
 	public Curso getCurso(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Curso)cursoDAO.find(Curso.class, id);
 	}
 
 	@Override

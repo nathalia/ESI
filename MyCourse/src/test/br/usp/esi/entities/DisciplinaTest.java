@@ -25,51 +25,98 @@ public class DisciplinaTest extends TestCase {
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		disciplina.setCurso(curso);
-		//ARRUMAR
-		disciplina.setDescricao(50);
+		
+		disciplina.setDescricao("desc");
 		disciplina.setNome("IA");
 		disciplina.setPeriodoIdeal(30);
-		Disciplina discSalvo
-		assertEquals(cursoSalvo.getNome(), curso.getNome());
+		Disciplina discSalvo = disciplinaService.saveDisciplina(disciplina);
+		assertEquals(discSalvo.getNome(), disciplina.getNome());
 	}
 	
-	public void testSelectAllCurso(){
+	public void testSelectAllDisciplinas(){
+		Disciplina disciplina = new Disciplina();
+		disciplina.setNome("cáculo I");
+		disciplina.setDescricao("desc");
+		disciplina.setCargaHoraria(200);
+		disciplina.setCodigo(3);
+		disciplina.setCreditosAula(4);
+		disciplina.setCodigo(8);
+		disciplina.setCreditosTrabalho(7);
+		disciplina.setPeriodoIdeal(7);
 		Curso curso = new Curso();
 		curso.setNome("SI");
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
+		disciplina.setCurso(curso);
 		
-		List<Curso> lista = cursoService.listAll();
-		assertTrue(lista.contains(curso));
-	}
-	
-	public void testAlterUsuario(){
-		Curso curso = new Curso();
-		curso.setNome("SI");
-		curso.setDescricao("desc");
-		Curso cursoSalvo = cursoService.saveCurso(curso);
-		cursoSalvo.setNome("SI2");
-		Curso cursoUpdate = cursoService.updateCurso(cursoSalvo);
+		disciplinaService.saveDisciplina(disciplina);
 		
-		assertEquals(cursoSalvo, cursoUpdate);
+		List<Disciplina> lista = disciplinaService.listAll();
+		assertTrue(lista.contains(disciplina));
 	}
 	
-	public void testFindUsuario(){
-		Curso curso = new Curso();
-		curso.setNome("SI");
-		curso.setDescricao("desc");
-		Curso cursoRetornado = cursoService.saveCurso(curso);
-		Curso cursoFind = cursoService.getCurso(cursoRetornado.getId());
-		assertEquals(cursoRetornado.getNome(), cursoFind.getNome());
-	}
-	
-	public void testDeleteUsuario(){
+	public void testAlterDisciplina(){
+		Disciplina disciplina = new Disciplina();
+		disciplina.setNome("cáculo I");
+		disciplina.setDescricao("desc");
+		disciplina.setCargaHoraria(200);
+		disciplina.setCodigo(3);
+		disciplina.setCreditosAula(4);
+		disciplina.setCodigo(8);
+		disciplina.setCreditosTrabalho(7);
+		disciplina.setPeriodoIdeal(7);
 		Curso curso = new Curso();
 		curso.setNome("SI");
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
+		disciplina.setCurso(curso);
 		
-		assertEquals(curso, cursoService.deleteCurso(curso));
+		Disciplina disciplinaSalva = disciplinaService.saveDisciplina(disciplina);
+		disciplinaSalva.setNome("Cálculo II");
+		Disciplina disciplinaUpdate = disciplinaService.updateDisciplina(disciplinaSalva);
+		
+		assertEquals(disciplinaSalva, disciplinaUpdate);
+	}
+	
+	public void testFindDisciplina(){
+		Disciplina disciplina = new Disciplina();
+		disciplina.setNome("cáculo I");
+		disciplina.setDescricao("desc");
+		disciplina.setCargaHoraria(200);
+		disciplina.setCodigo(3);
+		disciplina.setCreditosAula(4);
+		disciplina.setCodigo(8);
+		disciplina.setCreditosTrabalho(7);
+		disciplina.setPeriodoIdeal(7);
+		Curso curso = new Curso();
+		curso.setNome("SI");
+		curso.setDescricao("desc");
+		cursoService.saveCurso(curso);
+		disciplina.setCurso(curso);
+		
+		Disciplina disciplinaRetornada = disciplinaService.saveDisciplina(disciplina);
+		Disciplina disciplinaFind = disciplinaService.getDisciplina(disciplinaRetornada.getId());
+		assertEquals(disciplinaRetornada.getNome(), disciplinaFind.getNome());
+	}
+	
+	public void testDeleteDisciplina(){
+		Disciplina disciplina = new Disciplina();
+		disciplina.setNome("cáculo I");
+		disciplina.setDescricao("desc");
+		disciplina.setCargaHoraria(200);
+		disciplina.setCodigo(3);
+		disciplina.setCreditosAula(4);
+		disciplina.setCodigo(8);
+		disciplina.setCreditosTrabalho(7);
+		disciplina.setPeriodoIdeal(7);
+		Curso curso = new Curso();
+		curso.setNome("SI");
+		curso.setDescricao("desc");
+		cursoService.saveCurso(curso);
+		disciplina.setCurso(curso);
+		
+		disciplinaService.saveDisciplina(disciplina);
+		assertEquals(disciplina, disciplinaService.deleteDisciplina(disciplina));
 	}
 
 }

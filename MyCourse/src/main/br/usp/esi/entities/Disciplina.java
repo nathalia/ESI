@@ -29,7 +29,7 @@ public class Disciplina implements Serializable {
 	private int creditosAula;
 	private int creditosTrabalho;
 	private int cargaHoraria;
-	private int descricao;
+	private String descricao;
 	private int periodoIdeal;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumns({@JoinColumn(name="curso_id", nullable=false)})  
@@ -77,10 +77,10 @@ public class Disciplina implements Serializable {
 		this.cargaHoraria = cargaHoraria;
 	}
 	@Column(name="descricao", nullable=false, length=1000)
-	public int getDescricao() {
+	public String getDescricao() {
 		return descricao;
 	}
-	public void setDescricao(int descricao) {
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 	@Column(name="periodo_ideal", nullable=false)

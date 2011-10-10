@@ -29,7 +29,7 @@ public class CursoTest extends TestCase {
 		assertTrue(lista.contains(curso));
 	}
 	
-	public void testAlterUsuario(){
+	public void testAlterCurso(){
 		Curso curso = new Curso();
 		curso.setNome("SI");
 		curso.setDescricao("desc");
@@ -40,7 +40,7 @@ public class CursoTest extends TestCase {
 		assertEquals(cursoSalvo, cursoUpdate);
 	}
 	
-	public void testFindUsuario(){
+	public void testFindCurso(){
 		Curso curso = new Curso();
 		curso.setNome("SI");
 		curso.setDescricao("desc");
@@ -49,7 +49,7 @@ public class CursoTest extends TestCase {
 		assertEquals(cursoRetornado.getNome(), cursoFind.getNome());
 	}
 	
-	public void testDeleteUsuario(){
+	public void testDeleteCurso(){
 		Curso curso = new Curso();
 		curso.setNome("SI");
 		curso.setDescricao("desc");

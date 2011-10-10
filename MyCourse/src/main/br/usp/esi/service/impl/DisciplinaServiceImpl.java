@@ -11,13 +11,12 @@ public class DisciplinaServiceImpl implements DisciplinaService {
 	
 	@Override
 	public List<Disciplina> listAll() {
-		return disciplinaDAO.getAll();
+		return disciplinaDAO.findAll(Disciplina.class);
 	}
 
 	@Override
 	public Disciplina getDisciplina(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Disciplina)disciplinaDAO.getEntity(Disciplina.class, id);
 	}
 
 	@Override
@@ -28,6 +27,14 @@ public class DisciplinaServiceImpl implements DisciplinaService {
 	@Override
 	public Disciplina deleteDisciplina(Disciplina disciplina) {
 		if(disciplinaDAO.delete(disciplina))
+			return disciplina;
+		else
+			return null;
+	}
+
+	@Override
+	public Disciplina updateDisciplina(Disciplina disciplina) {
+		if(disciplinaDAO.update(disciplina))
 			return disciplina;
 		else
 			return null;

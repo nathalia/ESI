@@ -22,12 +22,20 @@ public interface DisciplinaService {
 	Disciplina getDisciplina(Integer id);
 
 	/**
-	 * Metodo para salvar/atualizar disciplina
+	 * Metodo para salvar disciplina
 	 * 
 	 * @param disciplina
 	 * @return Disciplina
 	 */
 	Disciplina saveDisciplina(Disciplina disciplina);
+	
+	/**
+	 * Metodo para atualizar disciplina
+	 * 
+	 * @param disciplina
+	 * @return Disciplina
+	 */
+	Disciplina updateDisciplina(Disciplina disciplina);
 
 	/**
 	 * Metodo para excluir um disciplina
