@@ -1,5 +1,7 @@
 package main.br.usp.esi.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +13,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="horario_aula")
-public class HorarioAula {
+public class HorarioAula implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8415443928914249473L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="horaio_aula_id", nullable=false)

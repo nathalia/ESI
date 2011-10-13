@@ -6,18 +6,17 @@ import main.br.usp.esi.dao.DisciplinaHorarioAulaDAO;
 import main.br.usp.esi.entities.DisciplinaHorarioAula;
 import main.br.usp.esi.service.DisciplinaHorarioAulaService;
 
-public class DisciplinaHorarioAulaImpl implements DisciplinaHorarioAulaService {
+public class DisciplinaHorarioAulaServiceImpl implements DisciplinaHorarioAulaService {
 	private DisciplinaHorarioAulaDAO disciplinaHorarioAulaDAO = new DisciplinaHorarioAulaDAO();
 
 	@Override
 	public List<DisciplinaHorarioAula> listAll() {
-		return disciplinaHorarioAulaDAO.getAll();
+		return disciplinaHorarioAulaDAO.findAll(DisciplinaHorarioAula.class);
 	}
 
 	@Override
 	public DisciplinaHorarioAula getDisciplinaHorarioAula(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (DisciplinaHorarioAula)disciplinaHorarioAulaDAO.find(DisciplinaHorarioAula.class, id);
 	}
 
 	@Override

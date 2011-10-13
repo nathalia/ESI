@@ -11,13 +11,12 @@ public class EspacoServiceImpl implements EspacoService {
 	
 	@Override
 	public List<Espaco> listAll() {
-		return espacoDAO.getAll();
+		return espacoDAO.findAll(Espaco.class);
 	}
 
 	@Override
 	public Espaco getEspaco(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Espaco)espacoDAO.find(Espaco.class, id);
 	}
 
 	@Override

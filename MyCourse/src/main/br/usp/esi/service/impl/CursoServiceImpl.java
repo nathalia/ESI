@@ -4,7 +4,6 @@ import java.util.List;
 
 import main.br.usp.esi.dao.CursoDAO;
 import main.br.usp.esi.entities.Curso;
-import main.br.usp.esi.entities.Usuario;
 import main.br.usp.esi.service.CursoService;
 
 public class CursoServiceImpl implements CursoService {

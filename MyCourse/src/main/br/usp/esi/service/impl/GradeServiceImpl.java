@@ -10,13 +10,12 @@ public class GradeServiceImpl implements GradeService {
 	private GradeDAO gradeDAO = new GradeDAO();
 	@Override
 	public List<Grade> listAll() {
-		return gradeDAO.getAll();
+		return gradeDAO.findAll(Grade.class);
 	}
 
 	@Override
 	public Grade getGrade(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Grade)gradeDAO.find(Grade.class, id);
 	}
 
 	@Override

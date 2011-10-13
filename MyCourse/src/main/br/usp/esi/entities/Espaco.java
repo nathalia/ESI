@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import main.br.usp.esi.enums.TipoEspaco;
+
 @Entity
 @Table(name="espaco")
 public class Espaco {
@@ -17,7 +19,7 @@ public class Espaco {
 	private int codigo;
 	private String nome;
 	private int lotacaoMax;
-	private String tipoEspaco;
+	private TipoEspaco tipoEspaco;
 	
 	public int getId() {
 		return id;
@@ -47,10 +49,10 @@ public class Espaco {
 		this.lotacaoMax = lotacaoMax;
 	}
 	@Column(name="tipo_espaco", nullable=false, length=255)
-	public String getTipoEspaco() {
+	public TipoEspaco getTipoEspaco() {
 		return tipoEspaco;
 	}
-	public void setTipoEspaco(String tipoEspaco) {
+	public void setTipoEspaco(TipoEspaco tipoEspaco) {
 		this.tipoEspaco = tipoEspaco;
 	}
 }
