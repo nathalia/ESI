@@ -39,4 +39,10 @@ public class UsuarioServiceImpl implements UsuarioService {
 		else
 			return null;
 	}
+
+	@Override
+	public boolean autenticarUsuario(Usuario usuario) {
+		
+		return false;
+	}
 }

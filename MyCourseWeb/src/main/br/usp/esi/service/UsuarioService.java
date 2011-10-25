@@ -43,4 +43,11 @@ public interface UsuarioService {
 	 * @return Usuario
 	 */
 	Usuario deleteUsuario(Usuario usuario);
+	/**
+	 * Metodo para autenticação de usuario
+	 * 
+	 * @param usuario, senha
+	 * @return Usuario
+	 */
+	boolean autenticarUsuario(Usuario usuario);
 }
