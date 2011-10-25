@@ -191,7 +191,7 @@ h5 strong {font-size:20px; line-height:24px; color:#878787; margin-bottom:-6px; 
 .main-box-right {background:url(images/main-box-right.png) repeat-y right top; padding-right:25px;}
 .main-box {background:#fff;}
 .main-box .indent {padding:12px 5px 51px 8px;}
-.main-box .indent1 {padding:33px 0px 0px 10px;}
+.main-box .indent1 {padding:0px 0px 0px 10px;}
 
 .main-box-top-tail {background:url(images/main-box-top-tail.png) repeat-x left top; height:25px;}
 .main-box-top-tail1 {background:url(images/main-box-top-tail1.gif) no-repeat left top; height:25px;}
@@ -382,4 +382,7 @@ h5 strong {font-size:20px; line-height:24px; color:#878787; margin-bottom:-6px; 
 }
 #form-login .submeter{
 	background:url(images/link-left-bg.png) left top no-repeat; display:inline-block; text-decoration:none; margin:10px 0 0 0px; color:#343434; font-weight:bold; cursor:pointer; font-size:12px;	
+}
+#form-login .item-form{
+	margin-left: 10px;
 }
