@@ -4,6 +4,7 @@ import java.util.List;
 
 import main.br.usp.esi.dao.GradeDAO;
 import main.br.usp.esi.entities.Grade;
+import main.br.usp.esi.entities.Usuario;
 import main.br.usp.esi.service.GradeService;
 
 public class GradeServiceImpl implements GradeService {
@@ -26,6 +27,14 @@ public class GradeServiceImpl implements GradeService {
 	@Override
 	public Grade deleteGrade(Grade grade) {
 		if (gradeDAO.delete(grade))
+			return grade;
+		else
+			return null;
+	}
+	
+	@Override
+	public Grade updateGrade(Grade grade) {
+		if (gradeDAO.update(grade))
 			return grade;
 		else
 			return null;

@@ -68,7 +68,7 @@ public class UsuarioTest extends TestCase{
 		userRetornado.setNome("novoNome");
 		Usuario userUpdate = userService.updateUsuario(userRetornado);
 		
-		assertEquals(userRetornado, userUpdate);
+		assertEquals(userRetornado.getNome(), userUpdate.getNome());
 	}
 	
 	public void testFindUsuario(){

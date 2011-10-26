@@ -37,7 +37,7 @@ public class CursoTest extends TestCase {
 		cursoSalvo.setNome("SI2");
 		Curso cursoUpdate = cursoService.updateCurso(cursoSalvo);
 		
-		assertEquals(cursoSalvo, cursoUpdate);
+		assertEquals(cursoSalvo.getNome(), cursoUpdate.getNome());
 	}
 	
 	public void testFindCurso(){
@@ -55,6 +55,6 @@ public class CursoTest extends TestCase {
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		
-		assertEquals(curso, cursoService.deleteCurso(curso));
+		assertEquals(curso.getNome(), cursoService.deleteCurso(curso).getNome());
 	}
 }

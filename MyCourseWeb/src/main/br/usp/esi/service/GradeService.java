@@ -35,4 +35,6 @@ public interface GradeService {
 	 * @return Grade
 	 */
 	Grade deleteGrade(Grade grade);
+
+	Grade updateGrade(Grade grade);
 }

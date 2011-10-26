@@ -75,7 +75,7 @@ public class DisciplinaTest extends TestCase {
 		disciplinaSalva.setNome("Cálculo II");
 		Disciplina disciplinaUpdate = disciplinaService.updateDisciplina(disciplinaSalva);
 		
-		assertEquals(disciplinaSalva, disciplinaUpdate);
+		assertEquals(disciplinaSalva.getNome(), disciplinaUpdate.getNome());
 	}
 	
 	public void testFindDisciplina(){
@@ -116,7 +116,7 @@ public class DisciplinaTest extends TestCase {
 		disciplina.setCurso(curso);
 		
 		disciplinaService.saveDisciplina(disciplina);
-		assertEquals(disciplina, disciplinaService.deleteDisciplina(disciplina));
+		assertEquals(disciplina.getNome(), disciplinaService.deleteDisciplina(disciplina).getNome());
 	}
 
 }
