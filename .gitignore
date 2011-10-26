@@ -20,3 +20,4 @@ bin-debug
 html-template
 java/sdg-java/src/main/webapp/apps/
 *.metadata/
+MyCourseWeb/build/classes/hibernate.cfg.xml
