@@ -41,8 +41,16 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public boolean autenticarUsuario(Usuario usuario) {
-		
+	public boolean autenticarUsuario(String usuario, String senha) {
+		if (usuario.isEmpty()|| senha.isEmpty()){
+			return false;
+		}
+		//TODO
 		return false;
+	}
+
+	@Override
+	public boolean hasUser(Usuario usuario) {
+		return usuarioDAO.findByUser(usuario.getUser()) != null;
 	}
 }

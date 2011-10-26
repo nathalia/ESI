@@ -47,7 +47,14 @@ public interface UsuarioService {
 	 * Metodo para autenticação de usuario
 	 * 
 	 * @param usuario, senha
+	 * @return boolean
+	 */
+	boolean autenticarUsuario(String usuario, String senha);
+	/**
+	 * Metodo verificação de existência de usuário
+	 * 
+	 * @param usuario
 	 * @return Usuario
 	 */
-	boolean autenticarUsuario(Usuario usuario);
+	public boolean hasUser(Usuario usuario);
 }

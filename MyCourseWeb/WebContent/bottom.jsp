@@ -6,15 +6,11 @@
 							<div class="indent">
 								<div class="wrapper p1">
 									<div class="col-1">
-										<strong class="white">About Us</strong>
+										<strong class="white">Sobre</strong>
 										<ul class="footer-list">
 											<li><a href="#">Company Info</a>
 											</li>
 											<li><a href="#">Services</a>
-											</li>
-											<li><a href="#">Clients</a>
-											</li>
-											<li><a href="#">Solutions</a>
 											</li>
 										</ul>
 									</div>
