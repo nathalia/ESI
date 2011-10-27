@@ -107,4 +107,37 @@ public class UsuarioTest extends TestCase{
 		assertEquals(userIni, userService.deleteUsuario(userIni));
 	}
 	
+	public void testHasUser(){
+		Usuario usuario = new Usuario();
+		Curso curso = new Curso();
+		curso.setNome("SI");
+		curso.setDescricao("desc");
+		cursoService.saveCurso(curso);
+		
+		usuario.setCurso(curso);
+		usuario.setNome("tester");
+		usuario.setUser("username");
+		usuario.setSenha("senha");
+		usuario.setNumeroUSP(1);
+		
+		Usuario userRetornado = userService.saveUsuario(usuario);
+		
+		assertTrue(userService.hasUser(userRetornado));
+	}
+	
+	public void testAutenticarUser(){
+		Usuario usuario = new Usuario();
+		Curso curso = new Curso();
+		curso.setNome("SI");
+		curso.setDescricao("desc");
+		cursoService.saveCurso(curso);
+		
+		usuario.setCurso(curso);
+		usuario.setNome("tester");
+		usuario.setUser("username");
+		usuario.setSenha("senha");
+		usuario.setNumeroUSP(1);
+		
+		assertTrue(userService.autenticarUsuario(usuario.getUser(), usuario.getSenha()));
+	}
 }

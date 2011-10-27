@@ -67,3 +67,10 @@
 #page7 #footer .col-1 {width:114px; margin-right:40px;}
 #page7 #footer .col-2 {width:80px; margin-right:40px;}
 #page7 #footer .col-3 {width:171px; margin-right:59px;}
+
+.erro{
+	margin-top: 4px;
+	text-align: right;
+	color: red;
+	margin-right: 100px;
+}

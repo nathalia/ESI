@@ -45,12 +45,18 @@ public class UsuarioServiceImpl implements UsuarioService {
 		if (usuario.isEmpty()|| senha.isEmpty()){
 			return false;
 		}
-		//TODO
-		return false;
+		Usuario usuarioProcurado = new Usuario();
+		usuarioProcurado.setUser(usuario);
+		usuarioProcurado.setSenha(senha);
+		if (!hasUser(usuarioProcurado)){
+			return false;
+		}
+		
+		return usuarioDAO.autenticarUsuario(usuario, senha);
 	}
 
 	@Override
 	public boolean hasUser(Usuario usuario) {
-		return usuarioDAO.findByUser(usuario.getUser()) != null;
+		return usuarioDAO.findByUsername(usuario.getUser()) != null;
 	}
 }

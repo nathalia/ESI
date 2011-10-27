@@ -1,3 +1,5 @@
+<%@page import="main.br.usp.esi.service.UsuarioService"%>
+<%@page import="main.br.usp.esi.service.impl.UsuarioServiceImpl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -28,6 +30,25 @@
        ie_png.fix('.png, .main-box-left, .main-box-right, .main-box-top-tail, .main-box-top-right, .main-box-top-left, .main-box-bottom, .main-box-bottom-right, .main-box-bottom-left, .link, .policy strong');
    </script>
 <![endif]-->
+<%
+String mensagem = "";
+//UsuarioService usuarioService = new UsuarioServiceImpl();
+String usuario = request.getParameter("usuario");
+String senha = request.getParameter("senha");
+	if (usuario != null && senha !=null){
+		if (usuario.isEmpty()||senha.isEmpty()){
+			mensagem = "Preencha os campos corretamente.";
+		}
+		else{
+			if(usuario.equals("admin") && senha.equals("admin")){//usuarioService.autenticarUsuario(usuario, senha)){
+				response.sendRedirect("logado/index.jsp"); 
+			}
+			else{
+				mensagem = "Login incorreto. "+usuario+" "+senha;
+			}
+		}
+	}
+%>
 <body id="page1">
 	<div class="bg-top-centre">
 		<div class="bg-top">
@@ -39,27 +60,31 @@
 						<div class="help">
 							<a href="#loginWindow" class="loginWindow">Login</a> 
 						</div>
+						<div class="erro">
+							<% out.print(mensagem); %>
+						</div>
 						<div id="loginWindow" style=" display:none;">
 							<a href="#" class="closeDOMWindow" style="float: right; margin-top: -8px;">
 								<img src="images/close.gif" />									
 							</a>
-							<form id="form-login">
+							<form id="form-login" method="post" name="form-login" action="index.jsp">
 								<div class="item-form">
 									<label>Usuário</label>
 									<span class="input">
-										<input name="usuario" />
+										<input type="text" name="usuario" id="usuario" />
 									</span>
 								</div>
 								<div class="item-form">
 									<label>Senha</label>
 									<span class="input">
-										<input name="senha" />
+										<input type="password" name="senha" id="senha" />
 									</span>
 								</div>
 								<div class="item-form" style="margin-top:5px; margin-right: 5px;">
-									<a href="#" class="right">
+									<!-- <a href="#" class="right">
 										<img src="images/button-form-1.jpg" alt="">
-									</a>
+									</a> -->
+									<input type="submit" value ="Enviar"/> 
 								</div>
 							</form>
 						</div>
