@@ -1,5 +1,6 @@
 <%@page import="main.br.usp.esi.service.UsuarioService"%>
 <%@page import="main.br.usp.esi.service.impl.UsuarioServiceImpl"%>
+<%@page import="main.br.usp.esi.service.UsuarioService"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -32,7 +33,6 @@
 <![endif]-->
 <%
 String mensagem = "";
-//UsuarioService usuarioService = new UsuarioServiceImpl();
 String usuario = request.getParameter("usuario");
 String senha = request.getParameter("senha");
 	if (usuario != null && senha !=null){
@@ -40,6 +40,7 @@ String senha = request.getParameter("senha");
 			mensagem = "Preencha os campos corretamente.";
 		}
 		else{
+			UsuarioService usuarioService = new UsuarioServiceImpl();				
 			if(usuario.equals("admin") && senha.equals("admin")){//usuarioService.autenticarUsuario(usuario, senha)){
 				response.sendRedirect("logado/index.jsp"); 
 			}
