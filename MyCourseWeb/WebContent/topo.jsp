@@ -40,7 +40,7 @@ String senha = request.getParameter("senha");
 			mensagem = "Preencha os campos corretamente.";
 		}
 		else{
-			UsuarioService usuarioService = new UsuarioServiceImpl();				
+			//UsuarioService usuarioService = new UsuarioServiceImpl();				
 			if(usuario.equals("admin") && senha.equals("admin")){//usuarioService.autenticarUsuario(usuario, senha)){
 				response.sendRedirect("logado/index.jsp"); 
 			}
