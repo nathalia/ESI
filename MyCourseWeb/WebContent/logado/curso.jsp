@@ -1,5 +1,13 @@
 <%@ include file="topo.jsp"%>
 <%@ include file="menu.jsp"%>
+<script type="text/javascript">
+function deletar(){
+	
+}
+function alterar(){
+	
+}
+</script>
 <div id="content">
 	<div class="main-bg-tail-2">
 		<div class="main">
@@ -14,12 +22,43 @@
 						<div class="indent1">
 							<div id="formulario">
 								<form id="form-curso" action="">
-									<div class="item-form">
-										<label>Nome</label><input name="name" />
-									</div>
-									<div class="item-form"><label>Descrição</label>
-										<textarea rows="" cols=""></textarea>
-									</div>
+									<table id="listagem" cellpadding="10">
+										<tr>
+											<th>ID</th>
+											<th>Nome</th>
+											<th>Descrição</th>
+											<th>Alterar</th>
+											<th>Excluir</th>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>Teste</td>
+											<td>Descrição Descrição Descrição DescriçãoDescrição Descrição Descrição DescriçãoDescrição Descrição Descrição Descrição</td>
+											<td><img src="images/alter.png" onclick="alterar(1);"/></td>
+											<td><img src="images/trash.gif" onclick="deletar(1);"/></td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>Teste</td>
+											<td>Descrição Descrição Descrição DescriçãoDescrição Descrição Descrição DescriçãoDescrição Descrição Descrição Descrição</td>
+											<td><img src="images/alter.png" onclick="alterar(2);"/></td>
+											<td><img src="images/trash.gif" onclick="deletar(2);"/></td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>Teste</td>
+											<td>Descrição Descrição Descrição Descrição</td>
+											<td><img src="images/alter.png" onclick="alterar(3);"/></td>
+											<td><img src="images/trash.gif" onclick="deletar(3);"/></td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>Teste</td>
+											<td>Descrição Descrição Descrição Descrição</td>
+											<td><img src="images/alter.png"/></td>
+											<td><img src="images/trash.gif"/></td>
+										</tr>
+									</table>
 								</form>
 
 							</div>

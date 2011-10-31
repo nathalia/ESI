@@ -386,3 +386,19 @@ h5 strong {font-size:20px; line-height:24px; color:#878787; margin-bottom:-6px; 
 #form-login .item-form{
 	margin-left: 10px;
 }
+
+/*------------------ Listagem */
+#listagem{
+	
+}
+#listagem th{
+	border: solid #999 1px;
+	padding: 10px 15px;
+	background-color: #D1D1D1;
+	color: #999;
+}
+#listagem td{
+	text-align: center;
+	border: solid #999 1px;
+	padding: 10px 15px;
+}
