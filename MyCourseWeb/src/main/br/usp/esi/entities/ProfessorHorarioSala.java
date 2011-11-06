@@ -12,16 +12,16 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name="disciplina_horario")
-public class DisciplinaHorarioAula {
+public class ProfessorHorarioSala {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="disciplina_horario_id")
 	private Integer id;
-	private Date data;
-	private Disciplina disciplina;
+	private Professor professor;
 	@JoinColumn(name="horario_aula_id", nullable=false)
 	@OneToOne
 	private HorarioAula horarioAula;
+	private Sala sala;
 	
 	public Integer getId() {
 		return id;

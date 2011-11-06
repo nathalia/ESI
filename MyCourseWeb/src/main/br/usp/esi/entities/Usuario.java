@@ -18,12 +18,12 @@ public class Usuario {
 	private Integer id;
 	private String nome;
 	private int numeroUSP;
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumns({@JoinColumn(name="curso_id", nullable=false)})
-	private Curso curso;
+	/*@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumns({@JoinColumn(name="curso_id", nullable=false)})*/
+	//private Curso curso;
 	private String user;
 	private String senha;
-	private String tipoUsuario;
+	//private String tipoUsuario;
 	
 	public Integer getId() {
 		return id;
@@ -43,12 +43,6 @@ public class Usuario {
 	public void setNumeroUSP(int numeroUSP) {
 		this.numeroUSP = numeroUSP;
 	}
-	public Curso getCurso() {
-		return curso;
-	}
-	public void setCurso(Curso curso) {
-		this.curso = curso;
-	}
 	public String getUser() {
 		return user;
 	}
@@ -60,11 +54,5 @@ public class Usuario {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	public String getTipoUsuario() {
-		return tipoUsuario;
-	}
-	public void setTipoUsuario(String tipoUsuario) {
-		this.tipoUsuario = tipoUsuario;
 	}
 }

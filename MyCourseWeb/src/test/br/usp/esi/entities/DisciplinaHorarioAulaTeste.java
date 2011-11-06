@@ -5,7 +5,7 @@ import java.util.List;
 
 import main.br.usp.esi.entities.Curso;
 import main.br.usp.esi.entities.Disciplina;
-import main.br.usp.esi.entities.DisciplinaHorarioAula;
+import main.br.usp.esi.entities.ProfessorHorarioSala;
 import main.br.usp.esi.entities.Grade;
 import main.br.usp.esi.entities.HorarioAula;
 import main.br.usp.esi.service.CursoService;

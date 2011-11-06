@@ -6,25 +6,23 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="sala")
-public class Sala extends Espaco {
+public class Sala {
+	private int id;
 	private int numeroSala;
-	private String tipoSala;
 	private int andar;
-//	private Espaco espaco;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	@Column(name="num_sala", nullable=false)
 	public int getNumeroSala() {
 		return numeroSala;
 	}
 	public void setNumeroSala(int numeroSala) {
 		this.numeroSala = numeroSala;
-	}
-	@Column(name="tipo_sala", nullable=false, length=255)
-	public String getTipoSala() {
-		return tipoSala;
-	}
-	public void setTipoSala(String tipoSala) {
-		this.tipoSala = tipoSala;
 	}
 	@Column(name="andar", nullable=false)
 	public int getAndar() {

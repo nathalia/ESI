@@ -24,9 +24,6 @@ public class HorarioAula implements Serializable {
 	private Integer id;
 	private int horaInicio;
 	private int horaFim;
-	@JoinColumn(name="grade_id", nullable=false)
-	@ManyToOne
-	private Grade grade;
 	
 	public Integer getId() {
 		return id;
@@ -47,12 +44,5 @@ public class HorarioAula implements Serializable {
 	}
 	public void setHoraFim(int horaFim) {
 		this.horaFim = horaFim;
-	}
-	
-	public Grade getGrade() {
-		return grade;
-	}
-	public void setGrade(Grade grade) {
-		this.grade = grade;
 	}
 }

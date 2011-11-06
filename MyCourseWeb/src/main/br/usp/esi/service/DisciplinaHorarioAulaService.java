@@ -2,7 +2,7 @@ package main.br.usp.esi.service;
 
 import java.util.List;
 
-import main.br.usp.esi.entities.DisciplinaHorarioAula;
+import main.br.usp.esi.entities.ProfessorHorarioSala;
 
 public interface DisciplinaHorarioAulaService {
 	/**
@@ -10,7 +10,7 @@ public interface DisciplinaHorarioAulaService {
 	 * 
 	 * @return List<DisciplinaHorarioAula>
 	 */
-	List<DisciplinaHorarioAula> listAll();
+	List<ProfessorHorarioSala> listAll();
 
 	/**
 	 * Metodo para recuperar um disciplinaHorarioAula atraves do id
@@ -18,7 +18,7 @@ public interface DisciplinaHorarioAulaService {
 	 * @param id
 	 * @return DisciplinaHorarioAula
 	 */
-	DisciplinaHorarioAula getDisciplinaHorarioAula(Integer id);
+	ProfessorHorarioSala getDisciplinaHorarioAula(Integer id);
 
 	/**
 	 * Metodo para salvar/atualizar disciplinaHorarioAula
@@ -26,7 +26,7 @@ public interface DisciplinaHorarioAulaService {
 	 * @param disciplinaHorarioAula
 	 * @return DisciplinaHorarioAula
 	 */
-	DisciplinaHorarioAula saveDisciplinaHorarioAula(DisciplinaHorarioAula disciplinaHorarioAula);
+	ProfessorHorarioSala saveDisciplinaHorarioAula(ProfessorHorarioSala disciplinaHorarioAula);
 
 	/**
 	 * Metodo para excluir um disciplinaHorarioAula
@@ -34,5 +34,5 @@ public interface DisciplinaHorarioAulaService {
 	 * @param disciplinaHorarioAula
 	 * @return disciplinaHorarioAula
 	 */
-	DisciplinaHorarioAula deleteDisciplinaHorarioAula(DisciplinaHorarioAula disciplinaHorarioAula);
+	ProfessorHorarioSala deleteDisciplinaHorarioAula(ProfessorHorarioSala disciplinaHorarioAula);
 }

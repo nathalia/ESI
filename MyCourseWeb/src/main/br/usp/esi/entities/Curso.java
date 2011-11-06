@@ -27,8 +27,6 @@ public class Curso implements Serializable {
 	private String nome;
 	@OneToMany(fetch=FetchType.LAZY)
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
-	@OneToMany(fetch=FetchType.LAZY)
-	private List<Usuario> usuarios = new ArrayList<Usuario>();
 	private String descricao;
 	
 	public int getId() {
@@ -43,12 +41,6 @@ public class Curso implements Serializable {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-	public List<Usuario> getUsuarios() {
-		return usuarios;
-	}
-	public void setUsuarios(List<Usuario> usuarios) {
-		this.usuarios = usuarios;
 	}
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
