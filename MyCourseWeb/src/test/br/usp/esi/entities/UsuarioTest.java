@@ -5,7 +5,6 @@ import java.util.List;
 import junit.framework.TestCase;
 import main.br.usp.esi.entities.Curso;
 import main.br.usp.esi.entities.Usuario;
-import main.br.usp.esi.enums.TipoUsuario;
 import main.br.usp.esi.service.CursoService;
 import main.br.usp.esi.service.UsuarioService;
 import main.br.usp.esi.service.impl.CursoServiceImpl;
@@ -22,7 +21,6 @@ public class UsuarioTest extends TestCase{
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		
-		userIni.setCurso(curso);
 		userIni.setNome("tester");
 		userIni.setUser("username");
 		userIni.setSenha("senha");
@@ -39,15 +37,12 @@ public class UsuarioTest extends TestCase{
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		
-		userIni.setCurso(curso);
 		userIni.setNome("tester");
 		userIni.setUser("username");
 		userIni.setSenha("senha");
 		userIni.setNumeroUSP(1);
 		userService.saveUsuario(userIni);
 
-		userIni.setTipoUsuario(TipoUsuario.ALUNO.name());
-		
 		List<Usuario> lista = userService.listAll();
 		assertTrue(lista.contains(userIni));
 	}
@@ -59,7 +54,6 @@ public class UsuarioTest extends TestCase{
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		
-		userIni.setCurso(curso);
 		userIni.setNome("tester2");
 		userIni.setUser("username2");
 		userIni.setSenha("senha2");
@@ -78,7 +72,6 @@ public class UsuarioTest extends TestCase{
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		
-		userIni.setCurso(curso);
 		userIni.setNome("tester");
 		userIni.setUser("username");
 		userIni.setSenha("senha");
@@ -97,7 +90,6 @@ public class UsuarioTest extends TestCase{
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		
-		userIni.setCurso(curso);
 		userIni.setNome("tester");
 		userIni.setUser("username");
 		userIni.setSenha("senha");
@@ -114,7 +106,6 @@ public class UsuarioTest extends TestCase{
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		
-		usuario.setCurso(curso);
 		usuario.setNome("tester");
 		usuario.setUser("username");
 		usuario.setSenha("senha");
@@ -132,7 +123,6 @@ public class UsuarioTest extends TestCase{
 		curso.setDescricao("desc");
 		cursoService.saveCurso(curso);
 		
-		usuario.setCurso(curso);
 		usuario.setNome("tester");
 		usuario.setUser("username");
 		usuario.setSenha("senha");
