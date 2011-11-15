@@ -16,11 +16,6 @@ public class UsuarioTest extends TestCase{
 
 	public void testInsereUsuario(){
 		Usuario userIni = new Usuario();
-		Curso curso = new Curso();
-		curso.setNome("SI");
-		curso.setDescricao("desc");
-		cursoService.saveCurso(curso);
-		
 		userIni.setNome("tester");
 		userIni.setUser("username");
 		userIni.setSenha("senha");
