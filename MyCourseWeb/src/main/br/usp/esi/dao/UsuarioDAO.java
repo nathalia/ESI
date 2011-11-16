@@ -2,14 +2,10 @@ package main.br.usp.esi.dao;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
+import main.br.usp.esi.entities.Usuario;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
-
-import main.br.usp.esi.entities.Usuario;
 
 
 
