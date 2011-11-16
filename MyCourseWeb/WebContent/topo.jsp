@@ -3,8 +3,7 @@
 <%@page import="main.br.usp.esi.service.UsuarioService"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
-<%@taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <f:view>
 	<html>
@@ -71,15 +70,7 @@
 								src="images/close.gif" /> </a>
 							<form id="form-login" method="post" name="form-login"
 								action="index.jsp">
-								<h:outputText value="ExemploTexto" />
-								<!-- 
-								<h:dataTable columnClasses="classe1, classe2" value="#{exemploBean.nomedaVariavelQueVoceQuer}"
-								var="#{objeto}">
-								<h:column >
-									<h:outputText value="#{objeto.valor}"/>
-								</h:column>
-								</h:dataTable>
-								 -->
+
 								<div class="item-form">
 									<label>Usuário</label> <span class="input"> <input
 										type="text" name="usuario" id="usuario" /> </span>

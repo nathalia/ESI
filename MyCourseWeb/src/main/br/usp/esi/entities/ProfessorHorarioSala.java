@@ -29,21 +29,6 @@ public class ProfessorHorarioSala {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	@Column(name="data", unique=true, nullable=false)
-	public Date getData() {
-		return data;
-	}
-	public void setData(Date data) {
-		this.data = data;
-	}
-	@JoinColumn(name="disciplina_id", nullable=false)
-	@OneToOne
-	public Disciplina getDisciplina() {
-		return disciplina;
-	}
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
-	}
 	
 	public HorarioAula getHorarioAula() {
 		return horarioAula;
