@@ -2,11 +2,9 @@ package main.br.usp.esi.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,11 +16,17 @@ public class Sala {
 	private int id;
 	private int numeroSala;
 	private int andar;
-	@OneToOne(fetch=FetchType.LAZY)
-	private ProfessorHorarioSala professorHorarioSala;
 	
 	public int getId() {
 		return id;
+	}
+	public Sala(){
+		
+	}
+	public Sala(int numeroSala, int andar) {
+		super();
+		this.numeroSala = numeroSala;
+		this.andar = andar;
 	}
 	public void setId(int id) {
 		this.id = id;
@@ -40,11 +44,5 @@ public class Sala {
 	}
 	public void setAndar(int andar) {
 		this.andar = andar;
-	}
-	public ProfessorHorarioSala getProfessorHorarioSala() {
-		return professorHorarioSala;
-	}
-	public void setProfessorHorarioSala(ProfessorHorarioSala professorHorarioSala) {
-		this.professorHorarioSala = professorHorarioSala;
 	}
 }
