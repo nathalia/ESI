@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import main.br.usp.esi.service.UsuarioService;
+import main.br.usp.esi.service.impl.UsuarioServiceImpl;
+
 
 @Entity
 @Table(name="usuario")
@@ -23,7 +26,7 @@ public class Usuario {
 	private String user;
 	private String senha;
 	//private String tipoUsuario;
-	
+
 	public Integer getId() {
 		return id;
 	}
@@ -53,5 +56,15 @@ public class Usuario {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public String login(){
+		System.out.println(this.user);
+		System.out.println(this.senha);
+		System.out.println("Viemos pra ca");
+		UsuarioService userService = new UsuarioServiceImpl();
+		if(userService.autenticarUsuario(this.user, this.senha))
+			return "logado";
+		else
+			return "recusado";
 	}
 }

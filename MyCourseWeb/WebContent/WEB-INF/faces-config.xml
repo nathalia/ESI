@@ -6,9 +6,17 @@
 
 <faces-config>
 <managed-bean>
-   <managed-bean-name>UsuarioBean</managed-bean-name>
+   <managed-bean-name>usuario</managed-bean-name>
    <managed-bean-class>main.br.usp.esi.entities.Usuario</managed-bean-class>
    <managed-bean-scope>session</managed-bean-scope>
 </managed-bean>
+
+  <navigation-rule>
+      <from-view-id>/topo.jsp</from-view-id>
+      <navigation-case>
+        <from-outcome>logado</from-outcome>
+        <to-view-id>/logado/index.jsp</to-view-id>
+      </navigation-case>
+   </navigation-rule>
 
 </faces-config>

@@ -41,7 +41,7 @@
 			mensagem = "Preencha os campos corretamente.";
 		} else {
 			if (usuario.equals("admin") && senha.equals("admin")) {//usuarioService.autenticarUsuario(usuario, senha)){
-				response.sendRedirect("logado/index.jsp");
+				response.sendRedirect("logado/index.jsf");
 			} else {
 				mensagem = "Login incorreto. " + usuario + " " + senha;
 			}
@@ -69,27 +69,26 @@
 							<a href="#" class="closeDOMWindow"
 								style="float: right; margin-top: -8px;"> <img
 								src="images/close.gif" /> </a>
-							<form id="form-login" method="post" name="form-login"
-								action="index.jsp">
+							<h:form id="form-login">
 
 								<div class="item-form">
 									<label>Usuário</label>
-									<h:inputText id="usuario" value="#{usuario.user}" />
-									<span class="input"> <input type="text" name="usuario"
-										id="usuario" /> </span>
+									<span class="input"> 
+									<h:inputText id="usuario" value="#{usuario.user}" /> </span>
 								</div>
 								<div class="item-form">
-									<label>Senha</label> <span class="input"> <input
-										type="password" name="senha" id="senha" /> </span>
+									<label>Senha</label> <span class="input">
+									<h:inputSecret id="password" value="#{usuario.senha}" />
+								 </span>
 								</div>
 								<div class="item-form"
 									style="margin-top: 5px; margin-right: 5px;">
 									<!-- <a href="#" class="right">
 										<img src="images/button-form-1.jpg" alt="">
 									</a> -->
-									<input type="submit" value="Enviar" />
+									<h:commandButton action="#{usuario.login}" value="enviar"/>  
 								</div>
-							</form>
+							</h:form>
 						</div>
 						<script type="text/javascript">
 							$('.loginWindow').click(function() {
