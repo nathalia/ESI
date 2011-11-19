@@ -3,11 +3,10 @@
 <%@page import="main.br.usp.esi.service.UsuarioService"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsf/html" prefix="h" %>
-<%@taglib uri="http://java.sun.com/jsf/core" prefix="f" %>
+<%@taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
+<%@taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<f:view>
-	<html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="style.css" rel="stylesheet" type="text/css" />
@@ -49,6 +48,7 @@
 		}
 	}
 %>
+<f:view>
 <body id="page1">
 	<div class="bg-top-centre">
 		<div class="bg-top">
@@ -73,9 +73,10 @@
 								action="index.jsp">
 
 								<div class="item-form">
-									<label>Usuário</label> <span class="input"> <input
-										type="text" name="usuario" id="usuario" />
-										 </span>
+									<label>Usuário</label>
+									<h:inputText id="usuario" value="#{usuario.user}" />
+									<span class="input"> <input type="text" name="usuario"
+										id="usuario" /> </span>
 								</div>
 								<div class="item-form">
 									<label>Senha</label> <span class="input"> <input
@@ -134,8 +135,8 @@
 							</ul>
 						</div> -->
 					</div>
-				
-	</div>
+
+				</div>
 </body>
-	</html>
 </f:view>
+</html>

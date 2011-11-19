@@ -5,6 +5,10 @@
 "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
 
 <faces-config>
-
+<managed-bean>
+   <managed-bean-name>UsuarioBean</managed-bean-name>
+   <managed-bean-class>main.br.usp.esi.entities.Usuario</managed-bean-class>
+   <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
 
 </faces-config>
