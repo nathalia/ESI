@@ -29,7 +29,7 @@ public class LoginBean {
 		this.password = password;
 	}
 	
-	public void login() {
+	public String login() {
 		UsuarioService usuarioService = new UsuarioServiceImpl();
 		FacesMessage msg = null;
 		
@@ -41,9 +41,11 @@ public class LoginBean {
 //			session.setAttribute("authenticated", true);
 //			session.setAttribute("user", user);
 //			return "index2?faces-redirect=true"; // Pagina Principal
-			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", email);  
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", email);
+			return "yes";
 		} else {
 			msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error", "Invalid credentials");  
+			return "no";
 		}
 	}
 
