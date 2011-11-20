@@ -11,6 +11,19 @@
    <managed-bean-scope>session</managed-bean-scope>
 </managed-bean>
 
+<managed-bean>
+   <managed-bean-name>usuarioDAO</managed-bean-name>
+   <managed-bean-class>main.br.usp.esi.dao.UsuarioDAO</managed-bean-class>
+   <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+   <managed-bean-name>entityDAO</managed-bean-name>
+   <managed-bean-class>main.br.usp.esi.dao.EntityDAO</managed-bean-class>
+   <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+
+
   <navigation-rule>
       <from-view-id>/topo.jsp</from-view-id>
       <navigation-case>
