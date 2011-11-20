@@ -21,17 +21,7 @@
 <script type="text/javascript" src="resources/js/jquery.nivo.slider.pack.js"></script>
 <script type="text/javascript" src="resources/js/jquery.easing.1.2.js"></script>
 <script type="text/javascript" src="resources/js/script.js"></script>
-</h:head>
-<!--[if lt IE 7]>
-	<link href="ie_style.css" rel="stylesheet" type="text/css" />
-   <script type="text/javascript" src="js/ie_png.js"></script>
-   <script type="text/javascript">
-       ie_png.fix('.png, .main-box-left, .main-box-right, .main-box-top-tail, .main-box-top-right, .main-box-top-left, .main-box-bottom, .main-box-bottom-right, .main-box-bottom-left, .link, .policy strong');
-   </script>
-<![endif]-->
-<h:body id="page1">
-	<ui:include src="topo.xhtml"></ui:include>
-<script type="text/javascript">
+<!--<script type="text/javascript">
   $(function() {
     var $h2;
     var $answer;
@@ -51,8 +41,19 @@
         }
     )
  });
-</script>
-	<!-- <ui:include src="menu.xhtml"></ui:include> -->
+</script> -->
+</h:head>
+<!--[if lt IE 7]>
+	<link href="ie_style.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="js/ie_png.js"></script>
+   <script type="text/javascript">
+       ie_png.fix('.png, .main-box-left, .main-box-right, .main-box-top-tail, .main-box-top-right, .main-box-top-left, .main-box-bottom, .main-box-bottom-right, .main-box-bottom-left, .link, .policy strong');
+   </script>
+<![endif]-->
+<h:body id="page1">
+	 <ui:include src="topo.xhtml"></ui:include> 
+
+	 <ui:include src="menu.xhtml"></ui:include>
 <div id="content">
 	<div class="main-bg-tail-2">
 		<div class="main">
@@ -92,7 +93,7 @@
 	</div>
 </div>
 
-<!-- <ui:include src="bottom.xhmtl"></ui:include>-->
+ <ui:include src="bottom.xhtml"></ui:include>
 	<script type="text/javascript">
 		$(window).load(function() {
 			$('#slider').nivoSlider({
