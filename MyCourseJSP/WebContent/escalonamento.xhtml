@@ -83,26 +83,36 @@
 							<div class="indent1">
 								<div class="wrapper border2">
 									<div class="col-4">
-										<h2>Professores</h2>
-										<select>
-											<option>Professor 1</option>
-										</select> <select>
-											<option>Professor 2</option>
-										</select> <select>
-											<option>Professor 3</option>
-										</select> <select>
-											<option>Professor 4</option>
-										</select> <select>
-											<option>Professor 5</option>
-										</select> <select>
-											<option>Professor 6</option>
-										</select> <select>
-											<option>Professor 7</option>
-										</select> <select>
-											<option>Professor 8</option>
-										</select> <select>
-											<option>Professor 9</option>
-										</select> 
+										<h:form>
+											<h2>Professores</h2>
+											<h:selectOneMenu value="#{professorBean.professores}">
+												<f:selectItems value="#{professorBean.professores}" />
+											</h:selectOneMenu>
+											<select>
+												<option>Professor 2</option>
+											</select>
+											<select>
+												<option>Professor 3</option>
+											</select>
+											<select>
+												<option>Professor 4</option>
+											</select>
+											<select>
+												<option>Professor 5</option>
+											</select>
+											<select>
+												<option>Professor 6</option>
+											</select>
+											<select>
+												<option>Professor 7</option>
+											</select>
+											<select>
+												<option>Professor 8</option>
+											</select>
+											<select>
+												<option>Professor 9</option>
+											</select>
+										</h:form>
 										<h2>Sala</h2>
 										<select>
 											<option>Sala</option>
