@@ -12,7 +12,13 @@
 						<div class="help">
 							<a href="#loginWindow" class="loginWindow">Login</a>
 						</div>
+<<<<<<< HEAD
 						<div class="erro"></div>
+=======
+						<div class="erro">
+								<h:outputText value="#{loginBean.msg}"/>							
+						</div>
+>>>>>>> 52bf017bad212de4cbd9f6894758e6fced0352f5
 						<div id="loginWindow" style="display: none;">
 							<a href="#" class="closeDOMWindow"
 								style="float: right; margin-top: -8px;"> <img
@@ -20,19 +26,34 @@
 							<h:form id="form-login">
 
 								<div class="item-form">
+<<<<<<< HEAD
 									<label>Usuario</label> <span class="input"> <h:inputText
 											id="usuario" value="username" /> </span>
 								</div>
 								<div class="item-form">
 									<label>Senha</label> <span class="input"> <h:inputSecret
 											id="password" value="senha" /> </span>
+=======
+									<label>Usu�rio</label>
+									<span class="input"> 
+									<h:inputText id="email" value="#{loginBean.email}" /> </span>
+								</div>
+								<div class="item-form">
+									<label>Senha</label> <span class="input">
+									<h:inputSecret id="password" value="#{loginBean.password}" />
+								 </span>
+>>>>>>> 52bf017bad212de4cbd9f6894758e6fced0352f5
 								</div>
 								<div class="item-form"
 									style="margin-top: 5px; margin-right: 5px;">
 									<!-- <a href="#" class="right">
 										<img src="images/button-form-1.jpg" alt="">
 									</a> -->
+<<<<<<< HEAD
 									<h:commandButton action="#{usuario.login}" value="enviar" />
+=======
+									<h:commandButton action="#{loginBean.login}" value="enviar"/>  
+>>>>>>> 52bf017bad212de4cbd9f6894758e6fced0352f5
 								</div>
 							</h:form>
 						</div>
