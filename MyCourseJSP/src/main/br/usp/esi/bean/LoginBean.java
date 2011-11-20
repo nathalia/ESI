@@ -11,7 +11,7 @@ import main.br.usp.esi.service.impl.UsuarioServiceImpl;
 public class LoginBean {
 	private String email;
 	private String password;
-	String msg = "";
+	private String msg = "";
 
 	public String getEmail() {
 		return email;
@@ -33,25 +33,19 @@ public class LoginBean {
 		UsuarioService usuarioService = new UsuarioServiceImpl();
 		boolean autenticar = usuarioService.autenticarUsuario(this.getEmail(), this.getPassword());
 		if (autenticar) {
-<<<<<<< HEAD
-//			HttpSession session = (HttpSession) FacesContext
-//					.getCurrentInstance().getExternalContext()
-//					.getSession(true);
-//			session.setAttribute("authenticated", true);
-//			session.setAttribute("user", user);
-//			return "index2?faces-redirect=true"; // Pagina Principal
-			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", email);
-			return "yes";
+		return "logado";
 		} else {
-			msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error", "Invalid credentials");  
-			return "no";
-=======
-			return "logado";
-		} else {
-			msg = "Recusado";
+			setMsg("recusado");
 			return "";
->>>>>>> 52bf017bad212de4cbd9f6894758e6fced0352f5
 		}
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
 	}
 
 }
