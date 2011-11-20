@@ -140,7 +140,7 @@ h5 strong {font-size:20px; line-height:24px; color:#878787; margin-bottom:-6px; 
 .menu-bg {background:url(../images/menu-bg.jpg) no-repeat top center; height:63px;}
 * html .menu-bg {height:59px;}
 .main-bg-tail {background:url(../images/podmenu.gif) no-repeat top center; margin:-4px 0 0 1px;}
-.main-bg-tail-1 {background:url(../images/podmenu.gif) no-repeat top center; margin:5px 0 0 1px;}
+.main-bg-tail-1 {background:url(../images/podmenu.gif) no-repeat top center; margin:0px 0 0 1px;}
 .main-bg-tail-2 {background:url(../images/podmenu.gif) no-repeat top center; margin:0px 0 0 1px;}
 
 * html .main-bg-tail-1 {margin:10px 0 0 1px;}
@@ -177,7 +177,7 @@ h5 strong {font-size:20px; line-height:24px; color:#878787; margin-bottom:-6px; 
 
 /* Control nav styles (e.g. 1,2,3...) */
 .nivo-controlNav{ position: absolute;z-index:99; left:-77px; bottom:18px;}
-.nivo-controlNav a {position:relative;z-index:99;cursor:pointer; text-indent:-5000px; width:17px; height:17px; float:left; margin-right:3px; background:url(images/buttons.png) 0 0 no-repeat}
+.nivo-controlNav a {position:relative;z-index:99;cursor:pointer; text-indent:-5000px; width:17px; height:17px; float:left; margin-right:3px; background:url(../images/buttons.png) 0 0 no-repeat}
 .nivo-controlNav a.active { background-position: right}
 
 /* Caption styles */
