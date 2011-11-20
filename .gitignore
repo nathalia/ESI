@@ -3,6 +3,8 @@ target/
 .classpath
 *.project
 *.settings/
+libraries/
+libraries/*
 *.db
 *.log
 *.actionScriptProperties
