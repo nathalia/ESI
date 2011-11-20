@@ -33,7 +33,7 @@ public class LoginBean {
 		UsuarioService usuarioService = new UsuarioServiceImpl();
 		boolean autenticar = usuarioService.autenticarUsuario(this.getEmail(), this.getPassword());
 		if (autenticar) {
-		return "logado";
+		return "escalonamento";
 		} else {
 			setMsg("Login recusado");
 			return "";
