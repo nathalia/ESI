@@ -116,7 +116,7 @@ h2 {font-size:27px; line-height:1.2em; color:#353535; font-weight:normal; margin
 h5 {font-size:20px; line-height:24px; color:#363636; text-transform:uppercase; text-align:center; padding-left:3px;}
 h5 strong {font-size:20px; line-height:24px; color:#878787; margin-bottom:-6px; text-transform:uppercase; display:block; padding-right:3px;}
 
-.indent_1{margin-left:-20px;}
+.indent_1{margin-left:-20px; margin-top: 100px;}
 
 .col-indent {padding-right:38px;}
 .col-indent1 {padding-right:78px;}
