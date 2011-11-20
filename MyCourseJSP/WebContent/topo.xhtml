@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
@@ -14,7 +14,7 @@
 							<a href="#loginWindow" class="loginWindow">Login</a>
 						</div>
 						<div class="erro">
-								<h:outputText value="#{loginBean.msg}"/>							
+							<h:outputText value="#{loginBean.msg}" />
 						</div>
 						<div id="loginWindow" style="display: none;">
 							<a href="#" class="closeDOMWindow"
@@ -23,50 +23,52 @@
 							<h:form id="form-login">
 
 								<div class="item-form">
-									<label>Usuário</label>
-									<span class="input"> 
-									<h:inputText id="email" value="#{loginBean.email}" /> </span>
+									<label>Usuï¿½rio</label> <span class="input"> <h:inputText
+											id="email" value="#{loginBean.email}" /> </span>
 								</div>
 								<div class="item-form">
-									<label>Senha</label> <span class="input">
-									<h:inputSecret id="password" value="#{loginBean.password}" />
-								 </span>
+									<label>Senha</label> <span class="input"> <h:inputSecret
+											id="password" value="#{loginBean.password}" /> </span>
 								</div>
 								<div class="item-form"
 									style="margin-top: 5px; margin-right: 5px;">
 									<!-- <a href="#" class="right">
 										<img src="images/button-form-1.jpg" alt="">
 									</a> -->
-									<h:commandButton action="#{loginBean.login}" value="enviar"/>  
+									<h:commandButton action="#{loginBean.login}" value="enviar" />
 								</div>
 							</h:form>
 						</div>
 						<script type="text/javascript">
-							$('.loginWindow').click(function() {
-								$.openDOMWindow({
-									windowSourceID : '#loginWindow',
-									height : 138,
-									width : 230,
-									overlay : 0,
-									positionType : 'anchoredSingleWindow',
-									windowPadding : 20,
-									overlay : 0,
-									overlayColor : null,
-									windowBGColor : null,
-									windowBGImage : 'resources/images/form-login-bg.png',
-									overlayOpacity : '0',
-									borderSize : '0',
-									anchoredSelector : '.loginWindow',
-									positionLeft : 0,
-									positionTop : 18
-								});
-								return false;
-							});
+							$('.loginWindow')
+									.click(
+											function() {
+												$
+														.openDOMWindow({
+															windowSourceID : '#loginWindow',
+															height : 138,
+															width : 230,
+															overlay : 0,
+															positionType : 'anchoredSingleWindow',
+															windowPadding : 20,
+															overlay : 0,
+															overlayColor : null,
+															windowBGColor : null,
+															windowBGImage : 'resources/images/form-login-bg.png',
+															overlayOpacity : '0',
+															borderSize : '0',
+															anchoredSelector : '.loginWindow',
+															positionLeft : 0,
+															positionTop : 18
+														});
+												return false;
+											});
 						</script>
 					</div>
 					<div class="wrapper">
 						<div class="logo">
-							<a href="index.xhtml"><img src="resources/images/logo.jpg" alt="" /> </a>
+							<a href="index.xhtml"><img src="resources/images/logo.jpg"
+								alt="" /> </a>
 						</div>
 						<!-- se estiver logado -->
 						<!-- <div class="exils">
@@ -85,7 +87,6 @@
 							</ul>
 						</div> -->
 					</div>
-
 				</div>
 			</div>
 		</div>
