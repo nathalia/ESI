@@ -41,9 +41,7 @@
 							<a href="#loginWindow" class="loginWindow">Login</a>
 						</div>
 						<div class="erro">
-							<%
-								out.print(mensagem);
-							%>
+								<h:outputText value="#{loginBean.msg}"/>							
 						</div>
 						<div id="loginWindow" style="display: none;">
 							<a href="#" class="closeDOMWindow"
@@ -54,11 +52,11 @@
 								<div class="item-form">
 									<label>Usu�rio</label>
 									<span class="input"> 
-									<h:inputText id="usuario" value="username" /> </span>
+									<h:inputText id="email" value="#{loginBean.email}" /> </span>
 								</div>
 								<div class="item-form">
 									<label>Senha</label> <span class="input">
-									<h:inputSecret id="password" value="senha" />
+									<h:inputSecret id="password" value="#{loginBean.password}" />
 								 </span>
 								</div>
 								<div class="item-form"
@@ -66,7 +64,7 @@
 									<!-- <a href="#" class="right">
 										<img src="images/button-form-1.jpg" alt="">
 									</a> -->
-									<h:commandButton action="#{usuario.login}" value="enviar"/>  
+									<h:commandButton action="#{loginBean.login}" value="enviar"/>  
 								</div>
 							</h:form>
 						</div>

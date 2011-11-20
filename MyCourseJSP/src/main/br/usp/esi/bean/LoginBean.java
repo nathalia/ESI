@@ -11,6 +11,7 @@ import main.br.usp.esi.service.impl.UsuarioServiceImpl;
 public class LoginBean {
 	private String email;
 	private String password;
+	String msg = "";
 
 	public String getEmail() {
 		return email;
@@ -30,12 +31,12 @@ public class LoginBean {
 	
 	public String login() {
 		UsuarioService usuarioService = new UsuarioServiceImpl();
-		
 		boolean autenticar = usuarioService.autenticarUsuario(this.getEmail(), this.getPassword());
 		if (autenticar) {
 			return "logado";
 		} else {
-			return "recusado";
+			msg = "Recusado";
+			return "";
 		}
 	}
 

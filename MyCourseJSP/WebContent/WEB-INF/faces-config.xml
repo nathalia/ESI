@@ -12,7 +12,7 @@
 	</managed-bean>
 	
 	  <navigation-rule>
-      <from-view-id>/index.xhtml</from-view-id>
+      <from-view-id>/topo.xhtml</from-view-id>
       <navigation-case>
         <from-outcome>logado</from-outcome>
         <to-view-id>/logado.xhtml</to-view-id>
