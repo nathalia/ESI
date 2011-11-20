@@ -24,3 +24,5 @@ java/sdg-java/src/main/webapp/apps/
 *.metadata/
 MyCourseWeb/build/classes/hibernate.cfg.xml
 MyCourseWeb/src/hibernate.cfg.xml
+MyCourseJSP/build/classes/hibernate.cfg.xml
+MyCourseJSP/src/hibernate.cfg.xml
