@@ -13,18 +13,31 @@ import main.br.usp.esi.service.impl.ProfessorServiceImpl;
 @ManagedBean
 @ApplicationScoped
 public class ProfessorHorarioSalaBean {
-	List<String> professores;
+	List<Professor> professores;
+	List<Professor> professoresSelecionados = new ArrayList<Professor>();
+	private Professor professor;
 
-
-	public List<String> getProfessores() {
-		professores = new ArrayList<String>();
+	public Professor getProfessor() {
+		return professor;
+	}
+	public void setProfessor(Professor professor){
+		System.out.println(professor.getId());
+		professoresSelecionados.add(professor);
+	}
+	public List<Professor> getProfessores() {
+		professores = new ArrayList<Professor>();
 		ProfessorService professorService = new ProfessorServiceImpl();
 		for (Professor professor : professorService.listAll()) {
-			System.out.println(professor.getNome());
-			professores.add(professor.getNome());
+			professores.add(professor);
 		}
 		return professores;
 	}
+	public void resposta(){
+		for (Professor professor : professoresSelecionados) {
+			System.out.println(professor.getNome());
+		}
+	}
+	
 	
 
 }

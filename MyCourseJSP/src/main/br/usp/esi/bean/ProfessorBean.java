@@ -20,7 +20,6 @@ public class ProfessorBean {
 		professores = new ArrayList<String>();
 		ProfessorService professorService = new ProfessorServiceImpl();
 		for (Professor professor : professorService.listAll()) {
-			System.out.println(professor.getNome());
 			professores.add(professor.getNome());
 		}
 		return professores;

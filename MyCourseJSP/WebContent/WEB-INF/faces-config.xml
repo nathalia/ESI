@@ -23,6 +23,12 @@
 		<managed-bean-class>main.br.usp.esi.entities.Professor</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>professorHorarioSalaBean</managed-bean-name>
+		<managed-bean-class>main.br.usp.esi.bean.ProfessorHorarioSalaBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 	
 	  <navigation-rule>
       <from-view-id>/topo.xhtml</from-view-id>
