@@ -27,7 +27,7 @@ public class LoginBean {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	
 	public String login() {
 		UsuarioService usuarioService = new UsuarioServiceImpl();
 		

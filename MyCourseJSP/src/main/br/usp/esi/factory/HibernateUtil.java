@@ -7,7 +7,7 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 public class HibernateUtil {
 
-	private static SessionFactory factory;
+	private static final SessionFactory factory;
 
 	private static AnnotationConfiguration cfg;
 	static {

@@ -1,6 +1,5 @@
 <%@page import="main.br.usp.esi.service.UsuarioService"%>
 <%@page import="main.br.usp.esi.service.impl.UsuarioServiceImpl"%>
-<%@page import="main.br.usp.esi.service.UsuarioService"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
@@ -33,8 +32,8 @@
 <![endif]-->
 <%
 	String mensagem = "";
-	String usuario = request.getParameter("usuario");
-	//UsuarioService usuarioService = new UsuarioServiceImpl();
+	String usuario = request.getParameter("username");
+	UsuarioService usuarioService = new UsuarioServiceImpl();
 	String senha = request.getParameter("senha");
 	if (usuario != null && senha != null) {
 		if (usuario.isEmpty() || senha.isEmpty()) {
@@ -74,11 +73,11 @@
 								<div class="item-form">
 									<label>Usuário</label>
 									<span class="input"> 
-									<h:inputText id="usuario" value="#{usuario.user}" /> </span>
+									<h:inputText id="usuario" value="username" /> </span>
 								</div>
 								<div class="item-form">
 									<label>Senha</label> <span class="input">
-									<h:inputSecret id="password" value="#{usuario.senha}" />
+									<h:inputSecret id="password" value="senha" />
 								 </span>
 								</div>
 								<div class="item-form"
