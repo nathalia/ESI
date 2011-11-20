@@ -9,8 +9,15 @@
 <h:head>
 	<title>Home</title>
 </h:head>
-
 <h:body>
+	<h:form>
+		<h:outputLabel value="Email:" />
+		<h:inputText value="#{loginBean.email}" label="UserName" />
 
+		<h:outputLabel value="Senha:" />
+		<h:inputSecret value="#{loginBean.password}"></h:inputSecret>
+		<h:commandButton type="submit" value="Login"
+			action="#{loginBean.login}"></h:commandButton>
+	</h:form>
 </h:body>
 </html>
