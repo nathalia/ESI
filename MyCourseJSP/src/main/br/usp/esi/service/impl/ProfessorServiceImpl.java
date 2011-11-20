@@ -4,7 +4,6 @@ import java.util.List;
 
 import main.br.usp.esi.dao.ProfessorDAO;
 import main.br.usp.esi.entities.Professor;
-import main.br.usp.esi.entities.Usuario;
 import main.br.usp.esi.service.ProfessorService;
 
 public class ProfessorServiceImpl implements ProfessorService {
@@ -12,8 +11,7 @@ public class ProfessorServiceImpl implements ProfessorService {
 	
 	@Override
 	public List<Professor> listAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return professorDAO.findAll(Professor.class);
 	}
 
 	@Override
