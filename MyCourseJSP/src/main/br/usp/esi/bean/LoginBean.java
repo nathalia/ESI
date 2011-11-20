@@ -35,7 +35,7 @@ public class LoginBean {
 		if (autenticar) {
 		return "logado";
 		} else {
-			setMsg("recusado");
+			setMsg("Login recusado");
 			return "";
 		}
 	}
