@@ -6,6 +6,13 @@ import main.br.usp.esi.entities.Usuario;
 
 public interface UsuarioService {
 	/**
+	 * Metodo para retornar um usuario a partir de username
+	 * 
+	 * @return Usuario
+	 */
+	Usuario getUsuarioByUsername(String username);
+	
+	/**
 	 * Metodo para retornar uma lista de usuarios
 	 * 
 	 * @return List<Usuario>

@@ -24,6 +24,13 @@ public class ProfessorBean {
 		}
 		return professores;
 	}
-
+	
+	public String listaProfessores(){
+		ProfessorService professorService = new ProfessorServiceImpl();
+		for (Professor professor : professorService.listAll()) {
+			System.out.println(professor.getNome());
+		}
+		return "teste";
+	}
 
 }

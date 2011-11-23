@@ -32,10 +32,11 @@ public class ProfessorHorarioSalaBean {
 		}
 		return professores;
 	}
-	public void resposta(){
+	public String resposta(){
 		for (Professor professor : professoresSelecionados) {
 			System.out.println(professor.getNome());
 		}
+		return "teste";
 	}
 	
 	

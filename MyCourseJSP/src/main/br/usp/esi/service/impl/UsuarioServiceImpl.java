@@ -59,4 +59,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public boolean hasUser(Usuario usuario) {
 		return usuarioDAO.findByUsername(usuario.getUser()) != null;
 	}
+
+	@Override
+	public Usuario getUsuarioByUsername(String username) {
+		return usuarioDAO.findByUsername(username);
+	}
 }
