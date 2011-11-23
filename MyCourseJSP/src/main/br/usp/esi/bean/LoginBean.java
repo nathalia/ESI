@@ -37,11 +37,11 @@ public class LoginBean {
 		boolean autenticar = usuarioService.autenticarUsuario(this.getUsername(),
 				this.getPassword());
 		if (autenticar) {
-//			Usuario usuario = usuarioService.getUsuarioByUsername(this.getUsername());
-//			HttpSession session = (HttpSession) FacesContext
-//					.getCurrentInstance().getExternalContext().getSession(true);
-//			session.setAttribute("authenticated", true);
-//			session.setAttribute("user", usuario);
+			Usuario usuario = usuarioService.getUsuarioByUsername(this.getUsername());
+			HttpSession session = (HttpSession) FacesContext
+					.getCurrentInstance().getExternalContext().getSession(true);
+			session.setAttribute("authenticated", true);
+			session.setAttribute("user", usuario);
 			return "escalonamento";
 		} else {
 			setMsg("Login recusado");

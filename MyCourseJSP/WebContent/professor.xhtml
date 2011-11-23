@@ -78,6 +78,26 @@
 							<div class="indent1">
 								<div id="formulario">
 									<form id="form-curso" action="">
+										<h:dataTable value="#{professorBean.arr}" var="loc">
+											<h:column>
+												<f:facet name="header">
+													<h:outputText value="Employee No" />
+												</f:facet>
+												<h:outputText value="#{loc.empNo}" />
+											</h:column>
+											<h:column>
+												<f:facet name="header">
+													<h:outputText value="Employee Name" />
+												</f:facet>
+												<h:outputText value="#{loc.empName}" />
+											</h:column>
+											<h:column>
+												<f:facet name="header">
+													<h:outputText value="Frameworks" />
+												</f:facet>
+												<h:outputText value="#{loc}" />
+											</h:column>
+										</h:dataTable>
 										<table id="listagem" cellpadding="10">
 											<tr>
 												<th>ID</th>
@@ -91,9 +111,11 @@
 												<td>Descrição Descrição Descrição DescriçãoDescrição
 													Descrição Descrição DescriçãoDescrição Descrição Descrição
 													Descrição</td>
-												<td><img src="resources/images/alter.png" onclick="alterar(1);" />
+												<td><img src="resources/images/alter.png"
+													onclick="alterar(1);" />
 												</td>
-												<td><img src="resources/images/trash.gif" onclick="deletar(1);" />
+												<td><img src="resources/images/trash.gif"
+													onclick="deletar(1);" />
 												</td>
 											</tr>
 											<tr>
@@ -102,18 +124,22 @@
 												<td>Descrição Descrição Descrição DescriçãoDescrição
 													Descrição Descrição DescriçãoDescrição Descrição Descrição
 													Descrição</td>
-												<td><img src="resources/images/alter.png" onclick="alterar(2);" />
+												<td><img src="resources/images/alter.png"
+													onclick="alterar(2);" />
 												</td>
-												<td><img src="resources/images/trash.gif" onclick="deletar(2);" />
+												<td><img src="resources/images/trash.gif"
+													onclick="deletar(2);" />
 												</td>
 											</tr>
 											<tr>
 												<td>1</td>
 												<td>Teste</td>
 												<td>Descrição Descrição Descrição Descrição</td>
-												<td><img src="resources/images/alter.png" onclick="alterar(3);" />
+												<td><img src="resources/images/alter.png"
+													onclick="alterar(3);" />
 												</td>
-												<td><img src="resources/images/trash.gif" onclick="deletar(3);" />
+												<td><img src="resources/images/trash.gif"
+													onclick="deletar(3);" />
 												</td>
 											</tr>
 											<tr>
