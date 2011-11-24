@@ -127,6 +127,7 @@ public class ProfessorHorarioSalaBean {
 	}
 	
 	public String resposta(){
+		System.out.println("ME CHAMO");
 		ProfessorService professorService = new ProfessorServiceImpl();
 		SalaService salaService =  new SalaServiceImpl();
 		Professor professor1 = professorService.getProfessorByName(prof1);

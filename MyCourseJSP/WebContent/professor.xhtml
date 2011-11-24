@@ -80,7 +80,7 @@
 									<h:form id="form-curso">
 									
 								<h:panelGrid id="detailtab" >
-										<h:dataTable value="#{professorBean.professores}" var="prof">
+										<h:dataTable value="#{professorBean.professoresObj}" var="prof">
 											<h:column>
 												<f:facet name="header">
 													<h:outputText value="ID" />
@@ -97,7 +97,9 @@
 												<f:facet name="header">
 													<h:outputText value="Editar" />
 												</f:facet>
-												<h:commandLink value="Editar" action="#{professorBean.editProfessor}" />
+												<h:commandLink value="Editar" action="#{professorBean.editProfessor}">
+												<f:param value="#{prof.nome}" name="profNome"/>
+												</h:commandLink>
 											</h:column>
 										</h:dataTable>
 										</h:panelGrid>
