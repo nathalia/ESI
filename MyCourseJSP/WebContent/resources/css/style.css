@@ -419,3 +419,11 @@ h5 strong {font-size:20px; line-height:24px; color:#878787; margin-bottom:-6px; 
 #form-professor td{
 	padding: 10px 0;
 }
+
+#pref{
+	margin-top: 35px;
+}
+
+#form-pref label{
+	margin-right: 15px;
+}

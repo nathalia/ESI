@@ -85,4 +85,7 @@ public class ProfessorBean {
 		return "alteracaoPref";
 	}
 	
+	public retornaLabel(){
+	}
+	}
 }
