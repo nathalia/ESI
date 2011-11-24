@@ -257,7 +257,6 @@ public class ProfessorHorarioSalaBean {
 		quinta =  schedule.subList(18, 24);
 		sexta =  schedule.subList(24, 30);
 		sabado =  schedule.subList(30, 36);
-
 		return "escalonamentoResult";
 	}
 	public List<ProfessorHorarioSala> getSegunda() {

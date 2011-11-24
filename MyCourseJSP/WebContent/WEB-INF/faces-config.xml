@@ -76,8 +76,8 @@
 	<navigation-rule>
 		<from-view-id>/topo.xhtml</from-view-id>
 		<navigation-case>
-			<from-outcome>escalonamento</from-outcome>
-			<to-view-id>/escalonamento.xhtml</to-view-id>
+			<from-outcome>index</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

@@ -42,11 +42,20 @@ public class LoginBean {
 					.getCurrentInstance().getExternalContext().getSession(true);
 			session.setAttribute("authenticated", true);
 			session.setAttribute("user", usuario);
-			return "escalonamento";
+			return "index";
 		} else {
 			setMsg("Login recusado");
 			return "";
 		}
+	}
+	
+	public boolean logado(){
+		HttpSession session = (HttpSession) FacesContext
+				.getCurrentInstance().getExternalContext().getSession(true);
+		if((Boolean)session.getAttribute("authenticated"))
+				return true;
+		return false;
+		
 	}
 
 	public String getMsg() {
