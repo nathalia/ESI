@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import main.br.usp.esi.dao.ProfessorDAO;
 import main.br.usp.esi.entities.Professor;
 import main.br.usp.esi.entities.ProfessorHorarioSala;
 import main.br.usp.esi.entities.Sala;
@@ -13,7 +12,7 @@ import main.br.usp.esi.service.ProfessorService;
 
 public class SchedulerImpl {
 
-	public ArrayList<ProfessorHorarioSala> schedule(ArrayList<Professor> professores, ArrayList<List<Integer>> preferences, Sala sala){	
+	public ArrayList<ProfessorHorarioSala> schedule(List<Professor> professores, List<List<Integer>> preferences, Sala sala){	
 
 		ArrayList<Professor> professoresInsatisfeitos = new ArrayList<Professor>();
 		ArrayList<ProfessorHorarioSala> listaGrade = new ArrayList<ProfessorHorarioSala>();

@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<faces-config
-    xmlns="http://java.sun.com/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
-    version="2.0">
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
 	<managed-bean>
 		<managed-bean-name>loginBean</managed-bean-name>
 		<managed-bean-class>main.br.usp.esi.bean.LoginBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>professorBean</managed-bean-name>
 		<managed-bean-class>main.br.usp.esi.bean.ProfessorBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
-	
-	
+
+
 	<managed-bean>
 		<managed-bean-name>professor</managed-bean-name>
 		<managed-bean-class>main.br.usp.esi.entities.Professor</managed-bean-class>
@@ -27,16 +26,60 @@
 	<managed-bean>
 		<managed-bean-name>professorHorarioSalaBean</managed-bean-name>
 		<managed-bean-class>main.br.usp.esi.bean.ProfessorHorarioSalaBean</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>prof1</property-name>
+			<value>#{param['prof1']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>prof2</property-name>
+			<value>#{param['prof2']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>prof3</property-name>
+			<value>#{param['prof3']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>prof4</property-name>
+			<value>#{param['prof4']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>prof5</property-name>
+			<value>#{param['prof5']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>prof6</property-name>
+			<value>#{param['prof6']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>prof7</property-name>
+			<value>#{param['prof7']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>prof8</property-name>
+			<value>#{param['prof8']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>prof9</property-name>
+			<value>#{param['profI9']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>salaSelecionada</property-name>
+			<value>#{param['salaSelecionada']}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>schedule</property-name>
+			<value>#{param['schedule']}</value>
+		</managed-property>
 	</managed-bean>
-	
-	  <navigation-rule>
-      <from-view-id>/topo.xhtml</from-view-id>
-      <navigation-case>
-        <from-outcome>escalonamento</from-outcome>
-        <to-view-id>/escalonamento.xhtml</to-view-id>
-      </navigation-case>
-   </navigation-rule>
-   
-	
+
+	<navigation-rule>
+		<from-view-id>/topo.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>escalonamento</from-outcome>
+			<to-view-id>/escalonamento.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
 </faces-config>

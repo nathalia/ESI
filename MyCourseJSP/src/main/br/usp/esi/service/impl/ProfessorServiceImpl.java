@@ -37,4 +37,9 @@ public class ProfessorServiceImpl implements ProfessorService {
 		return null;
 	}
 
+	@Override
+	public Professor getProfessorByName(String name) {
+		return professorDAO.findByName(name);
+	}
+
 }
