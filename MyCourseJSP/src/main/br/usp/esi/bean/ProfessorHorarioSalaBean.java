@@ -184,6 +184,6 @@ public class ProfessorHorarioSalaBean {
 		
 		schedule = scheduleImpl.schedule(professoresSelecionados, preferences, sala);
 		
-		return "teste";
+		return "escalonamentoResult";
 	}
 }

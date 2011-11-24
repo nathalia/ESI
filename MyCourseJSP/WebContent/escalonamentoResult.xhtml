@@ -64,7 +64,6 @@
 
 	<ui:include src="menu.xhtml"></ui:include>
 
-	<!--header end-->
 	<div id="content">
 		<div class="main-bg-tail-2">
 			<div class="main">
@@ -76,83 +75,28 @@
 				<div class="main-box-left">
 					<div class="main-box-right">
 						<div class="main-box">
-							&nbsp;
-							<div class="boxes">
-								<div class="wrapper"></div>
-							</div>
 							<div class="indent1">
-								<div class="wrapper border2">
-									<div class="col-5">
-										<h2>Schedule</h2>
-										<table cellspacing="30" cellpadding="30">
-											<tr>
-												<th></th>
-												<th>Seg</th>
-												<th>Ter</th>
-												<th>Qua</th>
-												<th>Qui</th>
-												<th>Sex</th>
-												<th>Sab</th>
-											</tr>
-											<tr>
-												<th>8:00</th>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-											</tr>
-											<tr>
-												<th>8:00</th>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-											</tr>
-											<tr>
-												<th>8:00</th>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-											</tr>
-											<tr>
-												<th>8:00</th>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-											</tr>
-											<tr>
-												<th>8:00</th>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-											</tr>
-											<tr>
-												<th>8:00</th>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-												<td>Prof</td>
-											</tr>
-										</table>
-										<div class="alignright border2">
-											<a href="#" class="link-1">Salvar</a>
-										</div>
-									</div>
+								<div id="formulario">
+									<h:form id="form-horario">
+									
+								<h:panelGrid id="detailtab" >
+										<h:dataTable value="#{professorHorarioSalaBean.schedule}" var="item">
+											<h:column>
+												<f:facet name="header">
+													<h:outputText value="Professor" />
+												</f:facet>
+												<h:outputText value="#{item.professor.nome}" />
+											</h:column>
+											<h:column>
+												<f:facet name="header">
+													<h:outputText value="Hor&aacute;rio Aula" />
+												</f:facet>
+												<h:outputText value="#{item.horarioAula}"/>
+											</h:column>
+										</h:dataTable>
+										</h:panelGrid>
+									</h:form>
+
 								</div>
 							</div>
 						</div>
@@ -166,9 +110,9 @@
 			</div>
 		</div>
 	</div>
+
 	<!--footer -->
 	<ui:include src="bottom.xhtml"></ui:include>
 	<!--footer end-->
 </h:body>
-
 </html>
