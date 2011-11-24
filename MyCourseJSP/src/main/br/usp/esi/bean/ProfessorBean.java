@@ -6,8 +6,6 @@ import java.util.List;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
-import com.eds.common.jsf.BaseBackingBean;
-
 import main.br.usp.esi.entities.Professor;
 import main.br.usp.esi.service.ProfessorService;
 import main.br.usp.esi.service.impl.ProfessorServiceImpl;
