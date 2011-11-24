@@ -9,6 +9,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
 import main.br.usp.esi.entities.Professor;
+import main.br.usp.esi.enums.HorarioType;
 import main.br.usp.esi.service.ProfessorService;
 import main.br.usp.esi.service.impl.ProfessorServiceImpl;
 
@@ -53,10 +54,11 @@ public class ProfessorBean {
 		return "professorPref";
 	}
 	
-	public List<Integer> getPrefs(){
-		List<Integer> prefs = new ArrayList<Integer>();
+	public List<HorarioType> getPrefs(){
+		List<HorarioType> prefs = new ArrayList<HorarioType>();
+
 		for(int i = 1; i< 37; i++)
-			prefs.add(i);
+			prefs.add(HorarioType.valueOf(i+""));
 		return prefs;
 	}
 	private boolean preferenciaRepetida(){
@@ -85,7 +87,4 @@ public class ProfessorBean {
 		return "alteracaoPref";
 	}
 	
-	public retornaLabel(){
-	}
-	}
 }
