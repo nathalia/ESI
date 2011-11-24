@@ -59,4 +59,10 @@ public class ProfessorBean {
 			prefs.add(i);
 		return prefs;
 	}
+	
+	public String save(){
+		ProfessorService professorService = new ProfessorServiceImpl();
+		professorService.updateProfessor(prof);
+		return "alteracaoPref";
+	}
 }

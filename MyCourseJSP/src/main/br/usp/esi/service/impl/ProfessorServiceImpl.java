@@ -4,6 +4,7 @@ import java.util.List;
 
 import main.br.usp.esi.dao.ProfessorDAO;
 import main.br.usp.esi.entities.Professor;
+import main.br.usp.esi.entities.Usuario;
 import main.br.usp.esi.service.ProfessorService;
 
 public class ProfessorServiceImpl implements ProfessorService {
@@ -27,8 +28,10 @@ public class ProfessorServiceImpl implements ProfessorService {
 
 	@Override
 	public Professor updateProfessor(Professor professor) {
-		// TODO Auto-generated method stub
-		return null;
+		if (professorDAO.update(professor))
+			return professor;
+		else
+			return null;
 	}
 
 	@Override
