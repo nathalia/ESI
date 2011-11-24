@@ -63,66 +63,93 @@
 	<ui:include src="topo.xhtml"></ui:include>
 
 	<ui:include src="menu.xhtml"></ui:include>
-
-	<div id="content">
-		<div class="main-bg-tail-2">
-			<div class="main">
-				<div class="main-box-top-left">
-					<div class="main-box-top-right">
-						<div class="main-box-top-tail1"></div>
-					</div>
+<div id="content">
+	<div class="main-bg-tail-2">
+		<div class="main">
+			<div class="main-box-top-left">
+				<div class="main-box-top-right">
+					<div class="main-box-top-tail1"></div>
 				</div>
-				<div class="main-box-left">
-					<div class="main-box-right">
-						<div class="main-box">
-							<div class="indent1">
-								<div id="formulario">
-									<h2>
-										Professor
-										<h:outputText value="#{professorBean.prof.nome}" />
-									</h2>
-									<div id="pref">
-										<h:form id="form-pref" action="">
-											<label>Prefer&ecirc;ncia 1</label>
-											<h:selectOneMenu value="#{professorBean.prof.preferencia1}">
-												<f:selectItems value="#{professorBean.prefs}" />
-											</h:selectOneMenu>
-											<br></br><br></br>
-											<label>Prefer&ecirc;ncia 2</label>
-											<h:selectOneMenu value="#{professorBean.prof.preferencia2}">
-												<f:selectItems value="#{professorBean.prefs}" />
-											</h:selectOneMenu>
-											<br></br><br></br>
-											<label>Prefer&ecirc;ncia 3</label>
-											<h:selectOneMenu value="#{professorBean.prof.preferencia3}">
-												<f:selectItems value="#{professorBean.prefs}" />
-											</h:selectOneMenu>
-											<br></br><br></br>
-											<label>Prefer&ecirc;ncia 4</label>
-											<h:selectOneMenu value="#{professorBean.prof.preferencia4}">
-												<f:selectItems value="#{professorBean.prefs}" />
-											</h:selectOneMenu>
-											<br></br>
-											<div>
-												<h:commandButton styleClass="link-1" style="border:0;"
-													value="Enviar" action="#{professorBean.save}" />
+			</div>
+			<div class="main-box-left">
+				<div class="main-box-right">
+					<div class="main-box">
+						<div class="indent1">
+							<div class="cont">
+								<div class="col-4">
+									<form id="ContactForm" action="">
+										<div class="indent">
+											<div class="p1">
+												<span class="text">feedback</span>
 											</div>
-										</h:form>
-									</div>
+											<label><span class="input"><input type="text"
+													value="name" onblur="if(this.value=='') this.value='name'"
+													onfocus="if(this.value =='name' ) this.value=''" />
+											</span>
+											</label> <label><span class="input"><input type="text"
+													value="e-mail"
+													onblur="if(this.value=='') this.value='e-mail'"
+													onfocus="if(this.value =='e-mail' ) this.value=''" />
+											</span>
+											</label>
+											<div class="area">
+												<textarea cols="" rows=""
+													onblur="if(this.value=='') this.value='message'"
+													onfocus="if(this.value =='message' ) this.value=''">message</textarea>
+											</div>
+											<div class="alignright">
+												<a href="#" class="link"
+													onclick="document.getElementById('ContactForm').reset()"><span><span>Clear</span>
+												</span>
+												</a> <a href="#" class="link"
+													onclick="document.getElementById('ContactForm').submit()"><span><span>Send</span>
+												</span>
+												</a>
+											</div>
+										</div>
+									</form>
 								</div>
+								<div class="col-5" style="width: 650px; margin-left: 25px;">
+									<h2>Our Locations</h2>
+									<p class="black">
+										<strong>Argentina</strong>
+									</p>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+									Praesent vestibulum molestie lacus. Aenean nonummy hendrerit
+									mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis
+									natoque penatibus et magnis dis parturient montes, nascetur
+									ridiculus mus. Nulla dui. Fusce feugiat malesuada odio.
+									<p class="black">
+										<strong>Denmark</strong>
+									</p>
+									Morbi nunc odio, gravida at, cursus nec, luctus a, lorem.
+									Maecenas tristique orci ac sem. Duis ultricies pharetra magna.
+									Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum
+									dolor sit amet, consectetuer adipiscing elit. Mauris fermentum
+									dictum magna.
+									<p class="black">
+										<strong>Finland</strong>
+									</p>
+									Quisque nulla. Vestibulum libero nisl, porta vel, scelerisque
+									eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo
+									vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante
+									ipsum primis in faucibus orci luctus et ultrices posuere
+									cubilia Curae; Suspendisse sollicitudin velit sed leo.
+								</div>
+								<div class="clear"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="main-box-bottom-left">
-					<div class="main-box-bottom-right">
-						<div class="main-box-bottom"></div>
-					</div>
+			</div>
+			<div class="main-box-bottom-left">
+				<div class="main-box-bottom-right">
+					<div class="main-box-bottom"></div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+</div>
 	<!--footer -->
 	<ui:include src="bottom.xhtml"></ui:include>
 	<!--footer end-->

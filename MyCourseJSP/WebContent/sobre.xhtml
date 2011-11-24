@@ -63,66 +63,59 @@
 	<ui:include src="topo.xhtml"></ui:include>
 
 	<ui:include src="menu.xhtml"></ui:include>
-
-	<div id="content">
-		<div class="main-bg-tail-2">
-			<div class="main">
-				<div class="main-box-top-left">
-					<div class="main-box-top-right">
-						<div class="main-box-top-tail1"></div>
-					</div>
-				</div>
-				<div class="main-box-left">
-					<div class="main-box-right">
-						<div class="main-box">
-							<div class="indent1">
-								<div id="formulario">
-									<h2>
-										Professor
-										<h:outputText value="#{professorBean.prof.nome}" />
-									</h2>
-									<div id="pref">
-										<h:form id="form-pref" action="">
-											<label>Prefer&ecirc;ncia 1</label>
-											<h:selectOneMenu value="#{professorBean.prof.preferencia1}">
-												<f:selectItems value="#{professorBean.prefs}" />
-											</h:selectOneMenu>
-											<br></br><br></br>
-											<label>Prefer&ecirc;ncia 2</label>
-											<h:selectOneMenu value="#{professorBean.prof.preferencia2}">
-												<f:selectItems value="#{professorBean.prefs}" />
-											</h:selectOneMenu>
-											<br></br><br></br>
-											<label>Prefer&ecirc;ncia 3</label>
-											<h:selectOneMenu value="#{professorBean.prof.preferencia3}">
-												<f:selectItems value="#{professorBean.prefs}" />
-											</h:selectOneMenu>
-											<br></br><br></br>
-											<label>Prefer&ecirc;ncia 4</label>
-											<h:selectOneMenu value="#{professorBean.prof.preferencia4}">
-												<f:selectItems value="#{professorBean.prefs}" />
-											</h:selectOneMenu>
-											<br></br>
-											<div>
-												<h:commandButton styleClass="link-1" style="border:0;"
-													value="Enviar" action="#{professorBean.save}" />
-											</div>
-										</h:form>
+					
+					
+			<div id="content">
+				<div class="main-bg-tail-2">
+					<div class="main">
+						<div class="main-box-top-left">
+							<div class="main-box-top-right">
+								<div class="main-box-top-tail1">
+								</div>
+							</div>
+						</div>
+						<div class="main-box-left">
+							<div class="main-box-right">
+								<div class="main-box">
+									&nbsp;<div class="boxes">
+										<div class="wrapper">
+										</div>
 									</div>
+									<div class="indent1">
+										<div class="wrapper p5">
+											<div class="col-5">
+												<h2 class="bot3">Quem Somos</h2>
+												<div class="wrapper border">
+													<a href="#"><img src="images/page2-img1.jpg" alt="" class="imgindent"/></a>
+													<strong class="black">Sobre o MyCourse</strong>
+													<p>O portal MyCourse faz escalonamento autom&aacute;tico de hor&aacute;rios de aula para os professores em uma dada sala, de forma on line. Cada sala de aula pode acomodar até seis aulas diárias, sendo 36 aulas semanais. Cada professor deve lecionar quatro aulas semanais, portanto cada sala pode atender até nove professores na semana.
+
+É possível cadastrar as salas de aula, os professores e os respectivos cursos. É permitido que cada professor insira até quatro horários de aula preferenciais, e O escalonamento procura atender o número máximo possível de preferências cadastradas. Após o escalonamento automático, é permitido também que sejam feitas alterações manuais.
+
+Para utilizar o portal MyCourse, é preciso ser aluno, professor ou administrador da instituição de ensino, e possuir usuário e senha cadastrados no sistema.  </p>
+													<div class="alignright"><a href="#" class="link-1">Read More</a></div>
+												</div>
+												<div class="wrapper">
+													<a href="#"><img src="images/page2-img2.jpg" alt="" class="imgindent"/></a>
+													<h2>Nossa equipe</h2>
+													<p>Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl accumsan.</p>
+													<div class="alignright"><a href="#" class="link-1">Read More</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-box-bottom-left">
+							<div class="main-box-bottom-right">
+								<div class="main-box-bottom">
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="main-box-bottom-left">
-					<div class="main-box-bottom-right">
-						<div class="main-box-bottom"></div>
-					</div>
-				</div>
 			</div>
-		</div>
-	</div>
-
 	<!--footer -->
 	<ui:include src="bottom.xhtml"></ui:include>
 	<!--footer end-->
