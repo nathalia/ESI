@@ -49,6 +49,7 @@ public class Professor implements Serializable {
 		return preferencia1;
 	}
 	public void setPreferencia1(int preferencia1) {
+		System.out.println("TA MESMO"+this.nome);
 		this.preferencia1 = preferencia1;
 	}
 	public int getPreferencia2() {

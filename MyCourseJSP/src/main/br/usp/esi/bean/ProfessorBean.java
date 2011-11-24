@@ -16,11 +16,21 @@ public class ProfessorBean {
 
 	public List<Professor> getProfessores() {
 		List<Professor> professores = new ArrayList<Professor>();
-		System.out.println("SOCORRO");
 		ProfessorService professorService = new ProfessorServiceImpl();
 		for (Professor professor : professorService.listAll()) {
 			professores.add(professor);
 		}
 		return professores;
+	}
+	
+	public String editProfessor() {
+		return "professorPref";
+	}
+	
+	public List<Integer> getPrefs(){
+		List<Integer> prefs = new ArrayList<Integer>();
+		for(int i = 1; i< 37; i++)
+			prefs.add(i);
+		return prefs;
 	}
 }
