@@ -386,3 +386,36 @@ h5 strong {font-size:20px; line-height:24px; color:#878787; margin-bottom:-6px; 
 #form-login .item-form{
 	margin-left: 10px;
 }
+
+#form-horario{
+	text-align: center;
+	width: 100%;
+	max-width: 910px;
+	border: solid 1px;
+}
+#form-horario th{
+	border: solid 1px;
+	padding: 10px 20px;
+	background-color: #EAEAEA;
+	min-width: 103px;
+}
+#form-horario td{
+	padding: 10px 0;
+}
+
+
+#form-professor{
+	text-align: center;
+	width: 100%;
+	max-width: 910px;
+	border: solid 1px;
+}
+#form-professor th{
+	border: solid 1px;
+	padding: 10px 20px;
+	background-color: #EAEAEA;
+	min-width: 103px;
+}
+#form-professor td{
+	padding: 10px 0;
+}

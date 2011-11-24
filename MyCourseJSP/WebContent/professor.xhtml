@@ -77,7 +77,7 @@
 						<div class="main-box">
 							<div class="indent1">
 								<div id="formulario">
-									<h:form id="form-curso">
+									<h:form id="form-professor">
 									
 								<h:panelGrid id="detailtab" >
 										<h:dataTable value="#{professorBean.professoresObj}" var="prof">
@@ -97,8 +97,9 @@
 												<f:facet name="header">
 													<h:outputText value="Editar" />
 												</f:facet>
-												<h:commandLink value="Editar" action="#{professorBean.editProfessor}">
-												<f:param value="#{prof.nome}" name="profNome"/>
+												<h:commandLink value="" action="#{professorBean.editProfessor}">
+													<f:param value="#{prof.nome}" name="profNome"/>
+													<img src="resources/images/alter.png" />
 												</h:commandLink>
 											</h:column>
 										</h:dataTable>
