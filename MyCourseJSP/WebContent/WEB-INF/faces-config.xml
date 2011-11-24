@@ -61,7 +61,7 @@
 		</managed-property>
 		<managed-property>
 			<property-name>prof9</property-name>
-			<value>#{param['profI9']}</value>
+			<value>#{param['prof9']}</value>
 		</managed-property>
 		<managed-property>
 			<property-name>salaSelecionada</property-name>
@@ -102,6 +102,14 @@
 		<navigation-case>
 			<from-outcome>escalonamentoResult</from-outcome>
 			<to-view-id>/escalonamentoResult.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/escalonamento.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>professorRepetido</from-outcome>
+			<to-view-id>/professorRepetido.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 
