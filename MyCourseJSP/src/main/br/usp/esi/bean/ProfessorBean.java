@@ -14,11 +14,11 @@ import main.br.usp.esi.service.impl.ProfessorServiceImpl;
 @ApplicationScoped
 public class ProfessorBean {
 
-	public List<Professor> getProfessores() {
-		List<Professor> professores = new ArrayList<Professor>();
+	public List<String> getProfessores() {
+		List<String> professores = new ArrayList<String>();
 		ProfessorService professorService = new ProfessorServiceImpl();
 		for (Professor professor : professorService.listAll()) {
-			professores.add(professor);
+			professores.add(professor.getNome());
 		}
 		return professores;
 	}
