@@ -67,6 +67,10 @@
 			<property-name>salaSelecionada</property-name>
 			<value>#{param['salaSelecionada']}</value>
 		</managed-property>
+		<managed-property>
+			<property-name>schedule</property-name>
+			<value>#{param['schedule']}</value>
+		</managed-property>
 	</managed-bean>
 
 	<navigation-rule>

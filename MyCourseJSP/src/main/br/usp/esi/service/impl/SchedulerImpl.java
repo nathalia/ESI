@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import main.br.usp.esi.dao.ProfessorDAO;
 import main.br.usp.esi.entities.Professor;
 import main.br.usp.esi.entities.ProfessorHorarioSala;
 import main.br.usp.esi.entities.Sala;

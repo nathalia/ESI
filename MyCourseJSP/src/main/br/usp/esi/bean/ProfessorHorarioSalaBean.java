@@ -9,10 +9,8 @@ import javax.faces.bean.SessionScoped;
 import main.br.usp.esi.entities.Professor;
 import main.br.usp.esi.entities.ProfessorHorarioSala;
 import main.br.usp.esi.entities.Sala;
-import main.br.usp.esi.service.ProfessorHorarioSalaService;
 import main.br.usp.esi.service.ProfessorService;
 import main.br.usp.esi.service.SalaService;
-import main.br.usp.esi.service.impl.ProfessorHorarioSalaServiceImpl;
 import main.br.usp.esi.service.impl.ProfessorServiceImpl;
 import main.br.usp.esi.service.impl.SalaServiceImpl;
 import main.br.usp.esi.service.impl.SchedulerImpl;
@@ -34,6 +32,7 @@ public class ProfessorHorarioSalaBean {
 	List<String> salas;
 	List<Professor> professoresSelecionados = new ArrayList<Professor>();
 	private Professor professor;
+	private ArrayList<ProfessorHorarioSala> schedule;
 	
 	public String getProf1() {
 		return prof1;
@@ -95,6 +94,12 @@ public class ProfessorHorarioSalaBean {
 	public void setSalaSelecionada(String salaSelecionada) {
 		this.salaSelecionada = salaSelecionada;
 	}
+	public ArrayList<ProfessorHorarioSala> getSchedule() {
+		return schedule;
+	}
+	public void setSchedule(ArrayList<ProfessorHorarioSala> schedule) {
+		this.schedule = schedule;
+	}
 	public Professor getProfessor() {
 		return professor;
 	}
@@ -147,6 +152,8 @@ public class ProfessorHorarioSalaBean {
 		
 		SchedulerImpl scheduleImpl = new SchedulerImpl();
 		ArrayList<List<Integer>> preferences = new ArrayList<List<Integer>>();
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(0);
 		ArrayList<ProfessorHorarioSala> schedule = scheduleImpl.schedule(professores, preferences, sala);
 		
 		return "teste";
