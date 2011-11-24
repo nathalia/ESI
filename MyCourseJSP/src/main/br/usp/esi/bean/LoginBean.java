@@ -15,6 +15,8 @@ public class LoginBean {
 	private String username;
 	private String password;
 	private String msg = "";
+	private String menu = "menu.xhtml";
+	private String botao = "Login";
 
 	public String getUsername() {
 		return username;
@@ -42,6 +44,9 @@ public class LoginBean {
 					.getCurrentInstance().getExternalContext().getSession(true);
 			session.setAttribute("authenticated", true);
 			session.setAttribute("user", usuario);
+			menu = "menuLogado.xhtml";
+			setMsg("Bem-vindo "+ username);
+			botao = "Logout";
 			return "index";
 		} else {
 			setMsg("Login recusado");
@@ -49,13 +54,20 @@ public class LoginBean {
 		}
 	}
 	
-	public boolean logado(){
-		HttpSession session = (HttpSession) FacesContext
-				.getCurrentInstance().getExternalContext().getSession(true);
-		if((Boolean)session.getAttribute("authenticated"))
-				return true;
-		return false;
-		
+	public String getBotao() {
+		return botao;
+	}
+
+	public void setBotao(String botao) {
+		this.botao = botao;
+	}
+
+	public String getMenu() {
+		return menu;
+	}
+
+	public void setMenu(String menu) {
+		this.menu = menu;
 	}
 
 	public String getMsg() {
