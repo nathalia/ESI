@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<h:outputScript library="primefaces/jquery" name="jquery.js" />
+	<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="resources/css/faq.css" rel="stylesheet" type="text/css" />
+	<link href="resources/css/layout.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="resources/js/jquery-1.4.2.js"></script>
+	<script type="text/javascript" src="resources/js/imagepreloader.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.DOMWINDOW.js"></script>
+	<script type="text/javascript">
+		preloadImages([ 'images/link-left-bg-hover.png',
+				'images/link-right-bg-hover.png',
+				'images/link-tail-bg-hover.png', 'images/link-1-hover.jpg', ]);
+	</script>
+	<script type="text/javascript"
+		src="resources/js/jquery.nivo.slider.pack.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.easing.1.2.js"></script>
+	<script type="text/javascript" src="resources/js/script.js"></script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('#slider').nivoSlider({
+				effect : 'fold', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft' 
+				slices : 13,
+				animSpeed : 500,
+				pauseTime : 6000,
+				startSlide : 0, //Set starting Slide (0 index)
+				directionNav : false, //Next / Prev
+				directionNavHide : false, //Only show on hover
+				controlNav : true, //1,2,3...
+				controlNavThumbs : false, //Use thumbnails for Control Nav
+				controlNavThumbsFromRel : false, //Use image rel for thumbs
+				controlNavThumbsSearch : '.jpg', //Replace this with...
+				controlNavThumbsReplace : '_thumb.jpg', //...this in thumb Image src
+				keyboardNav : true, //Use left / right arrows
+				pauseOnHover : true, //Stop animation while hovering
+				manualAdvance : false, //Force manual transitions
+				captionOpacity : 1, //Universal caption opacity
+				beforeChange : function() {
+				},
+				afterChange : function() {
+				},
+				slideshowEnd : function() {
+				} //Triggers after all slides have been shown
+			});
+		});
+	</script>
+</h:head>
+<!--[if lt IE 7]>
+	<link href="ie_style.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="js/ie_png.js"></script>
+   <script type="text/javascript">
+       ie_png.fix('.png, .main-box-left, .main-box-right, .main-box-top-tail, .main-box-top-right, .main-box-top-left, .main-box-bottom, .main-box-bottom-right, .main-box-bottom-left, .link, .policy strong');
+   </script>
+<![endif]-->
+<h:body id="page1">
+	<ui:include src="topo.xhtml"></ui:include>
+
+	<ui:include src="menu.xhtml"></ui:include>
+
+	<div id="content">
+		<div class="main-bg-tail-2">
+			<div class="main">
+				<div class="main-box-top-left">
+					<div class="main-box-top-right">
+						<div class="main-box-top-tail1"></div>
+					</div>
+				</div>
+				<div class="main-box-left">
+					<div class="main-box-right">
+						<div class="main-box">
+							<div class="indent1">
+								<div id="formulario">
+								<h2>Erro</h2>
+									<h:form id="form-pref" action="">
+									
+<h:outputText value="Por favor, escolha quatro prefer&ecirc;ncias diferentes."/>
+									</h:form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-box-bottom-left">
+					<div class="main-box-bottom-right">
+						<div class="main-box-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--footer -->
+	<ui:include src="bottom.xhtml"></ui:include>
+	<!--footer end-->
+</h:body>
+</html>

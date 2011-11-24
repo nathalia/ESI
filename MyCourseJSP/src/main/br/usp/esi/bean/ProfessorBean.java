@@ -59,10 +59,30 @@ public class ProfessorBean {
 			prefs.add(i);
 		return prefs;
 	}
+	private boolean preferenciaRepetida(){
+		List<Integer> preferencias = new ArrayList<Integer>();
+		preferencias.add(prof.getPreferencia1());
+		preferencias.add(prof.getPreferencia2());
+		preferencias.add(prof.getPreferencia3());
+		preferencias.add(prof.getPreferencia4());
+		
+		if(preferencias.subList(1, preferencias.size()).contains(prof.getPreferencia1()))
+			return true;
+		if(preferencias.subList(1, preferencias.size()).contains(prof.getPreferencia2()))
+			return true;
+		if(preferencias.subList(1, preferencias.size()).contains(prof.getPreferencia3()))
+			return true;
+		if(preferencias.subList(1, preferencias.size()).contains(prof.getPreferencia4()))
+			return true;
+		return false;
+	}
 	
 	public String save(){
+		if(preferenciaRepetida())
+			return "preferenciaRepetida";
 		ProfessorService professorService = new ProfessorServiceImpl();
 		professorService.updateProfessor(prof);
 		return "alteracaoPref";
 	}
+	
 }
