@@ -77,82 +77,26 @@
 						<div class="main-box">
 							<div class="indent1">
 								<div id="formulario">
-									<form id="form-curso" action="">
-										<h:dataTable value="#{professorBean.arr}" var="loc">
+									<h:form id="form-curso">
+									
+								<h:panelGrid id="detailtab" >
+										<h:dataTable value="#{professorBean.professores}" var="prof">
 											<h:column>
 												<f:facet name="header">
-													<h:outputText value="Employee No" />
+													<h:outputText value="ID" />
 												</f:facet>
-												<h:outputText value="#{loc.empNo}" />
+												<h:outputText value="#{prof.id}" />
 											</h:column>
 											<h:column>
 												<f:facet name="header">
-													<h:outputText value="Employee Name" />
+													<h:outputText value="Nome" />
 												</f:facet>
-												<h:outputText value="#{loc.empName}" />
+												<h:outputText value="#{prof.nome}" />
 											</h:column>
-											<h:column>
-												<f:facet name="header">
-													<h:outputText value="Frameworks" />
-												</f:facet>
-												<h:outputText value="#{loc}" />
-											</h:column>
+
 										</h:dataTable>
-										<table id="listagem" cellpadding="10">
-											<tr>
-												<th>ID</th>
-												<th>Nome</th>
-												<th>Alterar</th>
-												<th>Excluir</th>
-											</tr>
-											<tr>
-												<td>1</td>
-												<td>Teste</td>
-												<td>Descrição Descrição Descrição DescriçãoDescrição
-													Descrição Descrição DescriçãoDescrição Descrição Descrição
-													Descrição</td>
-												<td><img src="resources/images/alter.png"
-													onclick="alterar(1);" />
-												</td>
-												<td><img src="resources/images/trash.gif"
-													onclick="deletar(1);" />
-												</td>
-											</tr>
-											<tr>
-												<td>1</td>
-												<td>Teste</td>
-												<td>Descrição Descrição Descrição DescriçãoDescrição
-													Descrição Descrição DescriçãoDescrição Descrição Descrição
-													Descrição</td>
-												<td><img src="resources/images/alter.png"
-													onclick="alterar(2);" />
-												</td>
-												<td><img src="resources/images/trash.gif"
-													onclick="deletar(2);" />
-												</td>
-											</tr>
-											<tr>
-												<td>1</td>
-												<td>Teste</td>
-												<td>Descrição Descrição Descrição Descrição</td>
-												<td><img src="resources/images/alter.png"
-													onclick="alterar(3);" />
-												</td>
-												<td><img src="resources/images/trash.gif"
-													onclick="deletar(3);" />
-												</td>
-											</tr>
-											<tr>
-												<td>1</td>
-												<td>Teste</td>
-												<td>Descrição Descrição Descrição Descrição</td>
-												<td><img src="resources/images/alter.png" />
-												</td>
-												<td><img src="resources/images/trash.gif" />
-												</td>
-											</tr>
-										</table>
-									</form>
+										</h:panelGrid>
+									</h:form>
 
 								</div>
 							</div>
