@@ -82,45 +82,58 @@
 							</div>
 							<div class="indent1">
 								<div class="wrapper border2">
-									<div class="col-4" style="width:100px; margin-right: 100px;">
+									<div class="col-4" style="width: 100px; margin-right: 100px;">
 										<h:form>
 											<h2>Professores</h2>
-											<h:selectOneMenu id="prof1" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof1"
+												value="#{professorHorarioSalaBean.prof1}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-											<h:selectOneMenu id="prof2" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof2"
+												value="#{professorHorarioSalaBean.prof2}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-											<h:selectOneMenu id="prof3" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof3"
+												value="#{professorHorarioSalaBean.prof3}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-											<h:selectOneMenu id="prof4" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof4"
+												value="#{professorHorarioSalaBean.prof4}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-											<h:selectOneMenu id="prof5" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof5"
+												value="#{professorHorarioSalaBean.prof5}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-											<h:selectOneMenu id="prof6" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof6"
+												value="#{professorHorarioSalaBean.prof6}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-											<h:selectOneMenu id="prof7" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof7"
+												value="#{professorHorarioSalaBean.prof7}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-											<h:selectOneMenu id="prof8" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof8"
+												value="#{professorHorarioSalaBean.prof8}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-											<h:selectOneMenu id="prof9" value="#{professorHorarioSalaBean}">
+											<h:selectOneMenu id="prof9"
+												value="#{professorHorarioSalaBean.prof9}">
 												<f:selectItems value="#{professorBean.professores}" />
 											</h:selectOneMenu>
-										
-										<h2>Sala</h2>
-										<select>
-											<option>Sala</option>
-										</select>
-										
-										<div class="alignright border2">
-											<h:commandLink styleClass="link-1" action="#{professorHorarioSalaBean.resposta}" value="enviar" />
-										</div>
+
+											<h2>Sala</h2>
+											<h:selectOneMenu id="salaSel"
+												value="#{professorHorarioSalaBean.salaSelecionada}">
+												<f:selectItems value="#{professorHorarioSalaBean.salas}" />
+											</h:selectOneMenu>
+
+											<div class="alignright border2">
+												<h:commandLink styleClass="link-1"
+													action="#{professorHorarioSalaBean.resposta}"
+													value="enviar">
+												</h:commandLink>
+											</div>
 										</h:form>
 									</div>
 									<div class="col-5">

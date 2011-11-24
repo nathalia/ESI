@@ -13,6 +13,13 @@ public interface ProfessorService {
 	List<Professor> listAll();
 
 	/**
+	 * Metodo para recuperar um professor com certo nome
+	 * 
+	 * @param name
+	 * @return Professor
+	 */
+	Professor getProfessorByName(String name);
+	/**
 	 * Metodo para recuperar um professor atraves do id
 	 * 
 	 * @param id
