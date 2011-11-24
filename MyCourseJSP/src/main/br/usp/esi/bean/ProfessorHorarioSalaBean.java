@@ -133,8 +133,41 @@ public class ProfessorHorarioSalaBean {
 		return salas;
 	}
 	
+	private boolean repetido(){
+		List<String> nomes = new ArrayList<String>();
+		nomes.add(prof1);
+		nomes.add(prof2);
+		nomes.add(prof3);
+		nomes.add(prof4);
+		nomes.add(prof5);
+		nomes.add(prof6);
+		nomes.add(prof7);
+		nomes.add(prof8);
+		nomes.add(prof9);
+		
+		if(nomes.subList(1, nomes.size()).contains(prof1))
+			return true;
+		if(nomes.subList(2, nomes.size()).contains(prof2))
+			return true;
+		if(nomes.subList(3, nomes.size()).contains(prof3))
+			return true;
+		if(nomes.subList(4, nomes.size()).contains(prof4))
+			return true;
+		if(nomes.subList(5, nomes.size()).contains(prof5))
+			return true;
+		if(nomes.subList(6, nomes.size()).contains(prof6))
+			return true;
+		if(nomes.subList(7, nomes.size()).contains(prof7))
+			return true;
+		if(nomes.subList(8, nomes.size()).contains(prof8))
+			return true;
+		return false;
+	}
+	
 	public String resposta(){
-		System.out.println("ME CHAMO");
+		if(repetido())
+			return "professorRepetido";
+
 		ProfessorService professorService = new ProfessorServiceImpl();
 		SalaService salaService =  new SalaServiceImpl();
 		Professor professor1 = professorService.getProfessorByName(prof1);
