@@ -77,27 +77,10 @@
 						<div class="main-box">
 							<div class="indent1">
 								<div id="formulario">
-								<h2> Professor <h:outputText value="#{professorBean.prof.nome}" /></h2>
+								<h2>Preferencias</h2>
 									<h:form id="form-pref" action="">
-									<label>Preferência 1</label>
-										<h:selectOneMenu value="#{professorBean.prof.preferencia1}">
-											<f:selectItems value="#{professorBean.prefs}" />
-										</h:selectOneMenu>
-										<label>Preferência 2</label>
-										<h:selectOneMenu value="#{professorBean.prof.preferencia2}">
-											<f:selectItems value="#{professorBean.prefs}" />
-										</h:selectOneMenu>
-										<label>Preferência 3</label>
-										<h:selectOneMenu value="#{professorBean.prof.preferencia3}">
-											<f:selectItems value="#{professorBean.prefs}" />
-										</h:selectOneMenu>
-										<label>Preferência 4</label>
-										<h:selectOneMenu value="#{professorBean.prof.preferencia4}">
-											<f:selectItems value="#{professorBean.prefs}" />
-										</h:selectOneMenu>
-										<div class="alignright border2">
-										<h:commandButton value="Enviar" action="alteracaoPref" />
-										</div>
+									
+<h:outputText value="Preferencias alteradas com sucesso."/>
 									</h:form>
 								</div>
 							</div>

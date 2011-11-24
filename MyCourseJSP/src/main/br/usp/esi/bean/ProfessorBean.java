@@ -34,6 +34,15 @@ public class ProfessorBean {
 		}
 		return professores;
 	}
+
+	public List<Professor> getProfessoresObj() {
+		List<Professor> professores = new ArrayList<Professor>();
+		ProfessorService professorService = new ProfessorServiceImpl();
+		for (Professor professor : professorService.listAll()) {
+			professores.add(professor);
+		}
+		return professores;
+	}
 	
 	public String editProfessor() {
 		FacesContext context = FacesContext.getCurrentInstance();  
