@@ -82,7 +82,7 @@
 	</navigation-rule>
 
 	<navigation-rule>
-		<from-view-id>/menu.xhtml</from-view-id>
+		<from-view-id>/menuLogado.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>professorPref</from-outcome>
 			<to-view-id>/professorPref.xhtml</to-view-id>
