@@ -65,5 +65,5 @@ public class LoginBean {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
-
+	
 }
