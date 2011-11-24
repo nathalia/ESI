@@ -93,7 +93,12 @@
 												</f:facet>
 												<h:outputText value="#{prof.nome}" />
 											</h:column>
-
+											<h:column>
+												<f:facet name="header">
+													<h:outputText value="Editar" />
+												</f:facet>
+												<h:commandLink value="Editar" action="#{professorBean.editProfessor}" />
+											</h:column>
 										</h:dataTable>
 										</h:panelGrid>
 									</h:form>

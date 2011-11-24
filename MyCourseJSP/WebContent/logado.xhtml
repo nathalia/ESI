@@ -13,7 +13,7 @@
 	<h:form>
 	<h:outputText value="Logado"/>
 	<h:selectOneMenu value="#{professorBean.professores}">
-	   <f:selectItems value="#{professorBean.professores}" />
+	   <f:selectItems value="#{prof.nome}" var="prof"/>
 	</h:selectOneMenu>
 	</h:form>
 	<h:messages ></h:messages>

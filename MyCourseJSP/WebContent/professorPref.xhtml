@@ -78,167 +78,27 @@
 							<div class="indent1">
 								<div id="formulario">
 								<h2>Professor nome</h2>
-									<form id="form-pref" action="">
-									<label>PreferÃªncia 1</label>
-										<select>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
-											<option>11</option>
-											<option>12</option>
-											<option>13</option>
-											<option>14</option>
-											<option>15</option>
-											<option>16</option>
-											<option>17</option>
-											<option>18</option>
-											<option>19</option>
-											<option>20</option>
-											<option>21</option>
-											<option>22</option>
-											<option>23</option>
-											<option>24</option>
-											<option>25</option>
-											<option>26</option>
-											<option>27</option>
-											<option>28</option>
-											<option>29</option>
-											<option>30</option>
-											<option>31</option>
-											<option>32</option>
-											<option>33</option>
-											<option>34</option>
-											<option>35</option>
-											<option>36</option>
-										</select> 
-										<label>PreferÃªncia 2</label>
-										<select>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
-											<option>11</option>
-											<option>12</option>
-											<option>13</option>
-											<option>14</option>
-											<option>15</option>
-											<option>16</option>
-											<option>17</option>
-											<option>18</option>
-											<option>19</option>
-											<option>20</option>
-											<option>21</option>
-											<option>22</option>
-											<option>23</option>
-											<option>24</option>
-											<option>25</option>
-											<option>26</option>
-											<option>27</option>
-											<option>28</option>
-											<option>29</option>
-											<option>30</option>
-											<option>31</option>
-											<option>32</option>
-											<option>33</option>
-											<option>34</option>
-											<option>35</option>
-											<option>36</option>
-										</select>
-										<label>PreferÃªncia 3</label>
-										<select>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
-											<option>11</option>
-											<option>12</option>
-											<option>13</option>
-											<option>14</option>
-											<option>15</option>
-											<option>16</option>
-											<option>17</option>
-											<option>18</option>
-											<option>19</option>
-											<option>20</option>
-											<option>21</option>
-											<option>22</option>
-											<option>23</option>
-											<option>24</option>
-											<option>25</option>
-											<option>26</option>
-											<option>27</option>
-											<option>28</option>
-											<option>29</option>
-											<option>30</option>
-											<option>31</option>
-											<option>32</option>
-											<option>33</option>
-											<option>34</option>
-											<option>35</option>
-											<option>36</option>
-										</select>
-										<label>PreferÃªncia 4</label>
-										<select>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
-											<option>11</option>
-											<option>12</option>
-											<option>13</option>
-											<option>14</option>
-											<option>15</option>
-											<option>16</option>
-											<option>17</option>
-											<option>18</option>
-											<option>19</option>
-											<option>20</option>
-											<option>21</option>
-											<option>22</option>
-											<option>23</option>
-											<option>24</option>
-											<option>25</option>
-											<option>26</option>
-											<option>27</option>
-											<option>28</option>
-											<option>29</option>
-											<option>30</option>
-											<option>31</option>
-											<option>32</option>
-											<option>33</option>
-											<option>34</option>
-											<option>35</option>
-											<option>36</option>
-										</select>
+									<h:form id="form-pref" action="">
+									<label>Preferência 1</label>
+										<h:selectOneMenu value="#{professor.preferencia1}">
+											<f:selectItems value="#{professorBean.prefs}" />
+										</h:selectOneMenu>
+										<label>Preferência 2</label>
+										<h:selectOneMenu value="#{professor.preferencia2}">
+											<f:selectItems value="#{professorBean.prefs}" />
+										</h:selectOneMenu>
+										<label>Preferência 3</label>
+										<h:selectOneMenu value="#{professor.preferencia3}">
+											<f:selectItems value="#{professorBean.prefs}" />
+										</h:selectOneMenu>
+										<label>Preferência 4</label>
+										<h:selectOneMenu value="#{professor.preferencia4}">
+											<f:selectItems value="#{professorBean.prefs}" />
+										</h:selectOneMenu>
 										<div class="alignright border2">
-											<a href="#" class="link-1">Enviar</a>
+										<h:commandButton value="Enviar" action="professorPref" />
 										</div>
-									</form>
+									</h:form>
 								</div>
 							</div>
 						</div>
