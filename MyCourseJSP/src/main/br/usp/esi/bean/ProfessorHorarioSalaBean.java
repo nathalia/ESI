@@ -34,6 +34,13 @@ public class ProfessorHorarioSalaBean {
 	List<Professor> professoresSelecionados = new ArrayList<Professor>();
 	private Professor professor;
 	private List<ProfessorHorarioSala> schedule = new ArrayList<ProfessorHorarioSala>();
+	private List<ProfessorHorarioSala> segunda = new ArrayList<ProfessorHorarioSala>();
+	private List<ProfessorHorarioSala> terca = new ArrayList<ProfessorHorarioSala>();
+	private List<ProfessorHorarioSala> quarta = new ArrayList<ProfessorHorarioSala>();
+	private List<ProfessorHorarioSala> quinta = new ArrayList<ProfessorHorarioSala>();
+	private List<ProfessorHorarioSala> sexta = new ArrayList<ProfessorHorarioSala>();
+	private List<ProfessorHorarioSala> sabado = new ArrayList<ProfessorHorarioSala>();
+	
 	
 	public String getProf1() {
 		return prof1;
@@ -211,7 +218,51 @@ public class ProfessorHorarioSalaBean {
 		preferences.add(prefProfessor9);
 		
 		schedule = scheduleImpl.schedule(professoresSelecionados, preferences, sala);
-		
+		segunda = schedule.subList(0, 6);
+		terca =  schedule.subList(6, 12);
+		quarta = schedule.subList(12, 18);
+		quinta =  schedule.subList(18, 24);
+		sexta =  schedule.subList(24, 30);
+		sabado =  schedule.subList(30, 36);
+
 		return "escalonamentoResult";
 	}
+	public List<ProfessorHorarioSala> getSegunda() {
+		return segunda;
+	}
+	public void setSegunda(List<ProfessorHorarioSala> segunda) {
+		this.segunda = segunda;
+	}
+	public List<ProfessorHorarioSala> getTerca() {
+		return terca;
+	}
+	public void setTerca(List<ProfessorHorarioSala> terca) {
+		this.terca = terca;
+	}
+	public List<ProfessorHorarioSala> getQuarta() {
+		return quarta;
+	}
+	public void setQuarta(List<ProfessorHorarioSala> quarta) {
+		this.quarta = quarta;
+	}
+	public List<ProfessorHorarioSala> getQuinta() {
+		return quinta;
+	}
+	public void setQuinta(List<ProfessorHorarioSala> quinta) {
+		this.quinta = quinta;
+	}
+	public List<ProfessorHorarioSala> getSexta() {
+		return sexta;
+	}
+	public void setSexta(List<ProfessorHorarioSala> sexta) {
+		this.sexta = sexta;
+	}
+	public List<ProfessorHorarioSala> getSabado() {
+		return sabado;
+	}
+	public void setSabado(List<ProfessorHorarioSala> sabado) {
+		this.sabado = sabado;
+	}
+	
+
 }
