@@ -13,7 +13,7 @@ import main.br.usp.esi.service.ProfessorService;
 
 public class SchedulerImpl {
 
-	public ArrayList<ProfessorHorarioSala> schedule(ArrayList<Professor> professores, ArrayList<List<Integer>> preferences, Sala sala){	
+	public ArrayList<ProfessorHorarioSala> schedule(List<Professor> professores, List<List<Integer>> preferences, Sala sala){	
 
 		ArrayList<Professor> professoresInsatisfeitos = new ArrayList<Professor>();
 		ArrayList<ProfessorHorarioSala> listaGrade = new ArrayList<ProfessorHorarioSala>();

@@ -7,11 +7,15 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import main.br.usp.esi.entities.Professor;
+import main.br.usp.esi.entities.ProfessorHorarioSala;
 import main.br.usp.esi.entities.Sala;
+import main.br.usp.esi.service.ProfessorHorarioSalaService;
 import main.br.usp.esi.service.ProfessorService;
 import main.br.usp.esi.service.SalaService;
+import main.br.usp.esi.service.impl.ProfessorHorarioSalaServiceImpl;
 import main.br.usp.esi.service.impl.ProfessorServiceImpl;
 import main.br.usp.esi.service.impl.SalaServiceImpl;
+import main.br.usp.esi.service.impl.SchedulerImpl;
 
 @ManagedBean
 @SessionScoped
@@ -140,6 +144,10 @@ public class ProfessorHorarioSalaBean {
 		professoresSelecionados.add(professor9);
 		
 		Sala sala = salaService.getSalaByNumber(Integer.parseInt(salaSelecionada));
+		
+		SchedulerImpl scheduleImpl = new SchedulerImpl();
+		ArrayList<List<Integer>> preferences = new ArrayList<List<Integer>>();
+		ArrayList<ProfessorHorarioSala> schedule = scheduleImpl.schedule(professores, preferences, sala);
 		
 		return "teste";
 	}
