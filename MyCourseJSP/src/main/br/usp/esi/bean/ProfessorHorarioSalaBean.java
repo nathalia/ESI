@@ -1,6 +1,7 @@
 package main.br.usp.esi.bean;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -32,7 +33,7 @@ public class ProfessorHorarioSalaBean {
 	List<String> salas;
 	List<Professor> professoresSelecionados = new ArrayList<Professor>();
 	private Professor professor;
-	private ArrayList<ProfessorHorarioSala> schedule;
+	private List<ProfessorHorarioSala> schedule = new ArrayList<ProfessorHorarioSala>();
 	
 	public String getProf1() {
 		return prof1;
@@ -94,10 +95,10 @@ public class ProfessorHorarioSalaBean {
 	public void setSalaSelecionada(String salaSelecionada) {
 		this.salaSelecionada = salaSelecionada;
 	}
-	public ArrayList<ProfessorHorarioSala> getSchedule() {
+	public List<ProfessorHorarioSala> getSchedule() {
 		return schedule;
 	}
-	public void setSchedule(ArrayList<ProfessorHorarioSala> schedule) {
+	public void setSchedule(List<ProfessorHorarioSala> schedule) {
 		this.schedule = schedule;
 	}
 	public Professor getProfessor() {
@@ -129,14 +130,32 @@ public class ProfessorHorarioSalaBean {
 		ProfessorService professorService = new ProfessorServiceImpl();
 		SalaService salaService =  new SalaServiceImpl();
 		Professor professor1 = professorService.getProfessorByName(prof1);
+		List<Integer> prefProfessor1 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor1.set(professor1.getPreferencia1(), 1);
 		Professor professor2 = professorService.getProfessorByName(prof2);
+		List<Integer> prefProfessor2 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor2.set(professor2.getPreferencia1(), 1);
 		Professor professor3 = professorService.getProfessorByName(prof3);
+		List<Integer> prefProfessor3 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor3.set(professor3.getPreferencia1(), 1);
 		Professor professor4 = professorService.getProfessorByName(prof4);
+		List<Integer> prefProfessor4 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor4.set(professor4.getPreferencia1(), 1);
 		Professor professor5 = professorService.getProfessorByName(prof5);
+		List<Integer> prefProfessor5 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor5.set(professor5.getPreferencia1(), 1);
 		Professor professor6 = professorService.getProfessorByName(prof6);
+		List<Integer> prefProfessor6 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor6.set(professor6.getPreferencia1(), 1);
 		Professor professor7 = professorService.getProfessorByName(prof7);
+		List<Integer> prefProfessor7 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor7.set(professor7.getPreferencia1(), 1);
 		Professor professor8 = professorService.getProfessorByName(prof8);
+		List<Integer> prefProfessor8 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor8.set(professor8.getPreferencia1(), 1);
 		Professor professor9 = professorService.getProfessorByName(prof9);
+		List<Integer> prefProfessor9 = Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+		prefProfessor9.set(professor9.getPreferencia1(), 1);
 		
 		professoresSelecionados.add(professor1);
 		professoresSelecionados.add(professor2);
@@ -151,10 +170,19 @@ public class ProfessorHorarioSalaBean {
 		Sala sala = salaService.getSalaByNumber(Integer.parseInt(salaSelecionada));
 		
 		SchedulerImpl scheduleImpl = new SchedulerImpl();
+		
 		ArrayList<List<Integer>> preferences = new ArrayList<List<Integer>>();
-		List<Integer> list = new ArrayList<Integer>();
-		list.add(0);
-		ArrayList<ProfessorHorarioSala> schedule = scheduleImpl.schedule(professores, preferences, sala);
+		preferences.add(prefProfessor1);
+		preferences.add(prefProfessor2);
+		preferences.add(prefProfessor3);
+		preferences.add(prefProfessor4);
+		preferences.add(prefProfessor5);
+		preferences.add(prefProfessor6);
+		preferences.add(prefProfessor7);
+		preferences.add(prefProfessor8);
+		preferences.add(prefProfessor9);
+		
+		schedule = scheduleImpl.schedule(professoresSelecionados, preferences, sala);
 		
 		return "teste";
 	}
