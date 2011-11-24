@@ -78,22 +78,81 @@
 							<div class="indent1">
 								<div id="formulario">
 									<h:form id="form-horario">
-									
-								<h:panelGrid id="detailtab" >
-										<h:dataTable value="#{professorHorarioSalaBean.schedule}" var="item">
+
+										<h:panelGrid id="detailtab" columns="6">
+										
 											<h:column>
-												<f:facet name="header">
-													<h:outputText value="Professor" />
-												</f:facet>
-												<h:outputText value="#{item.professor.nome}" />
+												<h:dataTable value="#{professorHorarioSalaBean.segunda}"
+													var="item">
+													<h:column>
+														<f:facet name="header">
+															<h:outputText value="Segunda" />
+														</f:facet>
+														<h:outputText value="#{item.professor.nome}" />
+													</h:column>
+												</h:dataTable>
 											</h:column>
+											
 											<h:column>
-												<f:facet name="header">
-													<h:outputText value="Hor&aacute;rio Aula" />
-												</f:facet>
-												<h:outputText value="#{item.horarioAula}"/>
+												<h:dataTable value="#{professorHorarioSalaBean.terca}"
+													var="item">
+													<h:column>
+														<f:facet name="header">
+															<h:outputText value="Terça" />
+														</f:facet>
+														<h:outputText value="#{item.professor.nome}" />
+													</h:column>
+												</h:dataTable>
 											</h:column>
-										</h:dataTable>
+											
+											<h:column>
+												<h:dataTable value="#{professorHorarioSalaBean.quarta}"
+													var="item">
+													<h:column>
+														<f:facet name="header">
+															<h:outputText value="Quarta" />
+														</f:facet>
+														<h:outputText value="#{item.professor.nome}" />
+													</h:column>
+												</h:dataTable>
+											</h:column>
+											
+											<h:column>
+												<h:dataTable value="#{professorHorarioSalaBean.quinta}"
+													var="item">
+													<h:column>
+														<f:facet name="header">
+															<h:outputText value="Quinta" />
+														</f:facet>
+														<h:outputText value="#{item.professor.nome}" />
+													</h:column>
+												</h:dataTable>
+											</h:column>
+											
+											<h:column>
+												<h:dataTable value="#{professorHorarioSalaBean.sexta}"
+													var="item">
+													<h:column>
+														<f:facet name="header">
+															<h:outputText value="Sexta" />
+														</f:facet>
+														<h:outputText value="#{item.professor.nome}" />
+													</h:column>
+												</h:dataTable>
+											</h:column>
+											
+											<h:column>
+												<h:dataTable value="#{professorHorarioSalaBean.sabado}"
+													var="item">
+													<h:column>
+														<f:facet name="header">
+															<h:outputText value="Sábado" />
+														</f:facet>
+														<h:outputText value="#{item.professor.nome}" />
+													</h:column>
+												</h:dataTable>
+											</h:column>
+											
 										</h:panelGrid>
 									</h:form>
 
