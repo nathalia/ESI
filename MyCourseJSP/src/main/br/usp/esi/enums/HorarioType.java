@@ -1,10 +1,50 @@
 package main.br.usp.esi.enums;
 
 public enum HorarioType {
-	SEGUNDA_UM, SEGUNDA_DOIS, SEGUNDA_TRES, SEGUNDA_QUATRO, SEGUNDA_CINCO, SEGUNDA_SEIS,
-	TERCA_UM, TERCA_DOIS, TERCA_TRES, TERCA_QUATRO, TERCA_CINCO, TERCA_SEIS,
-	QUARTA_UM, QUARTA_DOIS, QUARTA_TRES, QUARTA_QUATRO, QUARTA_CINCO, QUARTA_SEIS,
-	QUINTA_UM, QUINTA_DOIS, QUINTA_TRES, QUINTA_QUATRO, QUINTA_CINCO, QUINTA_SEIS,
-	SEXTA_UM, SEXTA_DOIS, SEXTA_TRES, SEXTA_QUATRO, SEXTA_CINCO, SEXTA_SEIS,
-	SABADO_UM, SABADO_DOIS, SABADO_TRES, SABADO_QUATRO, SABADO_CINCO, SABADO_SEIS
+	UM("Seg - 8:00"), 
+	DOIS("Seg - 10:15"), 
+	TRES("Seg - 14:00"), 
+	QUATRO("Seg - 16:15"), 
+	CINCO("Seg - 19:00"), 
+	SEIS("Seg - 21:15"),
+	SETE("Ter - 8:00"), 
+	OITO("Ter - 8:15"), 
+	NOVE("Ter - 14:00"), 
+	DEZ("Ter - 14:15"), 
+	ONZE("Ter - 19:00"), 
+	DOZE("Ter - 21:15"),
+	TREZE("Ter - 21:15"), 
+	QUATORZE("Ter - 21:15"), 
+	QUINZE("Ter - 21:15"), 
+	DEZESSEIS("Ter - 21:15"), 
+	DEZESSETE("Ter - 21:15"), 
+	DEZOITO("Ter - 21:15"),
+	DEZENOVE("Ter - 21:15"), 
+	VINTE("Ter - 21:15"), 
+	VINTE_UM("Ter - 21:15"), 
+	QUINTA_QUATRO("Ter - 21:15"), 
+	QUINTA_CINCO("Ter - 21:15"), 
+	QUINTA_SEIS("Ter - 21:15"),
+	SEXTA_UM("Ter - 21:15"), 
+	SEXTA_DOIS("Ter - 21:15"), 
+	SEXTA_TRES("Ter - 21:15"), 
+	SEXTA_QUATRO("Ter - 21:15"), 
+	SEXTA_CINCO("Ter - 21:15"), 
+	SEXTA_SEIS("Ter - 21:15"),
+	SABADO_UM("Ter - 21:15"), 
+	SABADO_DOIS("Ter - 21:15"), 
+	SABADO_TRES("Ter - 21:15"), 
+	SABADO_QUATRO("Ter - 21:15"), 
+	SABADO_CINCO("Ter - 21:15"), 
+	SABADO_SEIS("Ter - 21:15");
+	
+	private String desc;
+
+	private HorarioType(String desc) {
+		this.desc = desc;
+	}
+
+	public String getDesc() {
+		return desc;
+	}
 }
