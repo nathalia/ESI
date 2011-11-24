@@ -46,54 +46,63 @@ public class ProfessorHorarioSalaBean {
 		return prof1;
 	}
 	public void setProf1(String prof1) {
+		System.out.println(prof1);
 		this.prof1 = prof1;
 	}
 	public String getProf2() {
 		return prof2;
 	}
 	public void setProf2(String prof2) {
+		System.out.println(prof2);
 		this.prof2 = prof2;
 	}
 	public String getProf3() {
 		return prof3;
 	}
 	public void setProf3(String prof3) {
+		System.out.println(prof3);
 		this.prof3 = prof3;
 	}
 	public String getProf4() {
 		return prof4;
 	}
 	public void setProf4(String prof4) {
+		System.out.println(prof4);
 		this.prof4 = prof4;
 	}
 	public String getProf5() {
 		return prof5;
 	}
 	public void setProf5(String prof5) {
+		System.out.println(prof5);
 		this.prof5 = prof5;
 	}
 	public String getProf6() {
 		return prof6;
 	}
 	public void setProf6(String prof6) {
+		System.out.println(prof6);
 		this.prof6 = prof6;
 	}
 	public String getProf7() {
 		return prof7;
 	}
 	public void setProf7(String prof7) {
+		System.out.println(prof7);
 		this.prof7 = prof7;
 	}
 	public String getProf8() {
 		return prof8;
 	}
 	public void setProf8(String prof8) {
+		System.out.println(prof8);
 		this.prof8 = prof8;
 	}
 	public String getProf9() {
 		return prof9;
 	}
 	public void setProf9(String prof9) {
+		System.out.println(prof9);
 		this.prof9 = prof9;
 	}
 	public String getSalaSelecionada() {

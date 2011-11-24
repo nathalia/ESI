@@ -16,6 +16,8 @@ public class SchedulerImpl {
 
 		ArrayList<Professor> professoresInsatisfeitos = new ArrayList<Professor>();
 		ArrayList<ProfessorHorarioSala> listaGrade = new ArrayList<ProfessorHorarioSala>();
+		ProfessorService profService = new ProfessorServiceImpl();
+		
 		int[] grade = new int[36];
 
 		HashMap<String, Integer> mapa = new HashMap<String, Integer>();
@@ -42,7 +44,6 @@ public class SchedulerImpl {
 				professoresInsatisfeitos.add(professor);
 			}
 		}
-		ProfessorService profService = new ProfessorServiceImpl();
 		Collections.shuffle(professoresInsatisfeitos);
 		System.out.println(professoresInsatisfeitos.size());
 		for(int i = 0; i < 36; i++){
@@ -53,7 +54,7 @@ public class SchedulerImpl {
 							profService.getProfessor(grade[i]),i,sala)));
 				}
 				else{
-					grade[i] = professoresInsatisfeitos.get(0).getId();
+					grade[i] = professoresInsatisfeitos.remove(0).getId();
 					listaGrade.add((new ProfessorHorarioSala( 
 							profService.getProfessor(grade[i]),i,sala)));
 				}				

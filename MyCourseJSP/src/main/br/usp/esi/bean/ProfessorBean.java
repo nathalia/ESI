@@ -9,7 +9,6 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
 import main.br.usp.esi.entities.Professor;
-import main.br.usp.esi.enums.HorarioType;
 import main.br.usp.esi.service.ProfessorService;
 import main.br.usp.esi.service.impl.ProfessorServiceImpl;
 
@@ -54,11 +53,10 @@ public class ProfessorBean {
 		return "professorPref";
 	}
 	
-	public List<HorarioType> getPrefs(){
-		List<HorarioType> prefs = new ArrayList<HorarioType>();
-
+	public List<Integer> getPrefs(){
+		List<Integer> prefs = new ArrayList<Integer>();
 		for(int i = 1; i< 37; i++)
-			prefs.add(HorarioType.valueOf(i+""));
+			prefs.add(i);
 		return prefs;
 	}
 	private boolean preferenciaRepetida(){
@@ -70,11 +68,9 @@ public class ProfessorBean {
 		
 		if(preferencias.subList(1, preferencias.size()).contains(prof.getPreferencia1()))
 			return true;
-		if(preferencias.subList(1, preferencias.size()).contains(prof.getPreferencia2()))
+		if(preferencias.subList(2, preferencias.size()).contains(prof.getPreferencia2()))
 			return true;
-		if(preferencias.subList(1, preferencias.size()).contains(prof.getPreferencia3()))
-			return true;
-		if(preferencias.subList(1, preferencias.size()).contains(prof.getPreferencia4()))
+		if(preferencias.subList(3, preferencias.size()).contains(prof.getPreferencia3()))
 			return true;
 		return false;
 	}
